@@ -84,3 +84,36 @@
 - Add dark/light mode toggle
 - Write blog post: "How I Let an AI Build a Daily Quiz Site"
 - Consider adding a "random quiz" feature for repeat visitors
+
+---
+
+## Day 3 — June 25, 2026
+
+### What was built
+- Added **Docker Quiz #1** (5 questions, medium difficulty):
+  - Image vs container, docker build -t, Dockerfile, volumes, .dockerignore
+  - Docker is a highly relevant topic for the target audience
+  - Targets the DevOps audience segment
+- Added **DevOps category** to the quiz type system
+- Updated CATEGORIES type to include 'DevOps'
+
+### Quiz count
+- **8 quizzes** (40 total questions)
+- Categories: JavaScript, TypeScript, Python, Git, CSS, General CS, Developer Culture, DevOps
+
+### Feature observations
+- Docker quiz bridges the gap between pure coding quizzes and infrastructure
+- DevOps category opens up new audience segments (SREs, platform engineers)
+- Medium difficulty keeps it accessible while still challenging
+
+### Strategy adjustments
+- Docker is a natural fit for the developer audience — most developers use Docker daily
+- Adding DevOps category expands the site beyond pure coding
+- The quiz is shareable and creates engagement loops
+
+### Next steps
+- Add Kubernetes Quiz #1 (extends DevOps category)
+- Add dark/light mode toggle
+- Write blog post: "How I Let an AI Build a Daily Quiz Site"
+- Consider adding a "random quiz" feature for repeat visitors
+- Add quiz difficulty filtering on categories page
