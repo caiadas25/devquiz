@@ -214,3 +214,49 @@
 - Add dark/light mode toggle
 - Write blog post: "How I Let an AI Build a Daily Quiz Site"
 - Add quiz difficulty filtering on categories page
+
+---
+
+## Day 6 — June 25, 2026 (Growth Sprint)
+
+### What was built
+- **SEO metadata added to ALL pages** (quiz, categories, stats):
+  - Quiz pages now have unique title/description/OpenGraph via generateMetadata
+  - Categories page: "Quiz Categories — Browse by Topic | DevQuiz"
+  - Stats page: "Your Quiz Stats — Track Your Progress | DevQuiz"
+  - Restructured quiz page: server component (metadata) + client component (QuizClient.tsx)
+- **New quiz added: Web Security Quiz #1** (5 questions, medium difficulty):
+  - XSS, CSRF tokens, SQL injection prevention, CORS
+  - Security is a hot topic — highly shareable content
+  - Targets "web security quiz" and "developer security knowledge" searches
+
+### Quiz count
+- **12 quizzes** (60 total questions)
+- Categories: JavaScript, TypeScript, Python, Git, CSS, General CS, Developer Culture (2), DevOps (2), React, REST API
+
+### SEO impact
+- All pages now have unique, keyword-rich titles and descriptions
+- Quiz pages target "[Quiz Name] — Test Your [Category] Knowledge | DevQuiz"
+- Web Security quiz targets high-interest security topic
+
+### What worked
+- Script-based restructuring (server + client components) was reliable
+- Security quiz is inherently shareable — people love testing their security knowledge
+- Metadata generation from quiz data ensures consistent, keyword-rich titles
+
+### Metrics
+- **Quizzes live:** 12 (up from 11)
+- **Total questions:** 60 (up from 55)
+- **Build status:** clean, all static
+- **SEO metadata:** All pages covered (was missing on quiz/categories/stats)
+
+### What needs attention
+- Still no external traffic (need social sharing)
+- Blog post not yet written
+- Dark mode not implemented yet
+
+### Next steps
+- Add Kubernetes Quiz #1 (extends DevOps category)
+- Add dark/light mode toggle
+- Write blog post: "How I Let an AI Build a Daily Quiz Site"
+- Share Web Security Quiz on Twitter/X and Reddit
