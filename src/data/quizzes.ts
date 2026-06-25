@@ -545,5 +545,130 @@ export const quizzes: Quiz[] = [
         explanation: "`ps aux` lists all running processes. The pipe `|` sends that output to `grep`, which filters for lines containing 'nginx'."
       }
     ]
+  },
+  {
+    id: "react-quiz-1",
+    date: "2026-06-25",
+    category: "React",
+    title: "React Quiz #1",
+    description: "Test your React knowledge — hooks, rendering, state management, and component patterns.",
+    difficulty: "medium",
+    questions: [
+      {
+        question: "When should you use `useEffect` with an empty dependency array `[]`?",
+        options: [
+          "To run code after every render",
+          "To run code only once when the component mounts",
+          "To prevent the component from re-rendering",
+          "To clean up global event listeners"
+        ],
+        correct: 1,
+        explanation: "An empty dependency array means the effect has no dependencies to watch, so it only runs once after the initial render — similar to componentDidMount."
+      },
+      {
+        question: "What is the difference between `useState` and `useReducer`?",
+        options: [
+          "They are completely interchangeable",
+          "`useReducer` is better for complex state logic with multiple sub-values",
+          "`useState` only works with strings",
+          "`useReducer` is faster than `useState`"
+        ],
+        correct: 1,
+        explanation: "`useReducer` is ideal when state logic is complex, involves multiple sub-values, or when the next state depends on the previous one. It also makes testing easier."
+      },
+      {
+        question: "Why should you not call hooks inside loops, conditions, or nested functions?",
+        options: [
+          "It causes memory leaks",
+          "React relies on hook call order to match state between renders",
+          "It's just a style convention with no runtime effect",
+          "Hooks can only be called in the component body"
+        ],
+        correct: 1,
+        explanation: "React matches hook calls between renders by their order. If you call hooks conditionally, the order changes and React can't correctly associate state with hooks."
+      },
+      {
+        question: "What does `React.memo` do?",
+        options: [
+          "Caches the component's DOM nodes",
+          "Skips re-rendering the component if its props haven't changed",
+          "Memoizes the component's state",
+          "Prevents the component from unmounting"
+        ],
+        correct: 1,
+        explanation: "`React.memo` is a higher-order component that skips re-rendering when the new props are the same as the previous ones. It's a performance optimization."
+      },
+      {
+        question: "What is the correct way to update state based on the previous state?",
+        options: [
+          "`setState(state + 1)`",
+          "`setState(prev => prev + 1)`",
+          "`this.state.count++`",
+          "`setState({...state, count: state.count + 1})`"
+        ],
+        correct: 1,
+        explanation: "Using the functional update form `setState(prev => prev + 1)` ensures you're working with the most recent state value, which is important for async updates and batching."
+      }
+    ]
+  },
+  {
+    id: "rest-api-quiz-1",
+    date: "2026-06-25",
+    category: "REST API",
+    title: "REST API Quiz #1",
+    description: "Test your API knowledge — HTTP methods, status codes, authentication, and design patterns.",
+    difficulty: "easy",
+    questions: [
+      {
+        question: "Which HTTP method is used to create a new resource?",
+        options: ["GET", "PUT", "POST", "DELETE"],
+        correct: 2,
+        explanation: "POST is used to create a new resource on the server. GET reads, PUT updates (full replacement), PATCH updates (partial), and DELETE removes."
+      },
+      {
+        question: "What does HTTP status code 204 mean?",
+        options: [
+          "Not Found",
+          "No Content — the request succeeded but there's no response body",
+          "Moved Permanently",
+          "Bad Request"
+        ],
+        correct: 1,
+        explanation: "204 No Content means the server successfully processed the request but isn't returning any content. Commonly used after DELETE operations."
+      },
+      {
+        question: "What is the purpose of CORS headers?",
+        options: [
+          "To encrypt API responses",
+          "To allow or restrict which origins can access your API from a browser",
+          "To compress API responses",
+          "To authenticate API requests"
+        ],
+        correct: 1,
+        explanation: "CORS (Cross-Origin Resource Sharing) headers tell browsers which origins are allowed to make requests to your API. They prevent unauthorized cross-origin access."
+      },
+      {
+        question: "What's the difference between authentication and authorization?",
+        options: [
+          "They mean the same thing",
+          "Authentication verifies identity; authorization determines access level",
+          "Authentication is for APIs; authorization is for databases",
+          "Authorization happens first, then authentication"
+        ],
+        correct: 1,
+        explanation: "Authentication answers 'Who are you?' (login, tokens). Authorization answers 'What can you do?' (roles, permissions). You authenticate first, then authorize."
+      },
+      {
+        question: "What should a well-designed REST API return when a resource isn't found?",
+        options: [
+          "200 OK with an empty body",
+          "404 Not Found with an error message",
+          "500 Internal Server Error",
+          "302 Redirect to the homepage"
+        ],
+        correct: 1,
+        explanation: "404 Not Found is the correct status code. Returning 200 with an empty body confuses clients and makes debugging harder. A descriptive error message helps developers fix issues."
+      }
+    ]
   }
 ];
