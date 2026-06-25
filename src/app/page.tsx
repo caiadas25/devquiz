@@ -1,65 +1,101 @@
-import Image from "next/image";
+"use client";
+
+import { quizzes } from "@/data/quizzes";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const CATEGORY_COLORS: Record<string, string> = {
+  JavaScript: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
+  Python: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+  Git: "bg-orange-500/20 text-orange-300 border-orange-500/30",
+  CSS: "bg-pink-500/20 text-pink-300 border-pink-500/30",
+  "General CS": "bg-green-500/20 text-green-300 border-green-500/30",
+  "Developer Culture": "bg-violet-500/20 text-violet-300 border-violet-500/30",
+};
 
 export default function Home() {
+  const [results, setResults] = useState<Record<string, { score: number }>>({});
+  const [streak, setStreak] = useState(0);
+
+  useEffect(() => {
+    try {
+      setResults(JSON.parse(localStorage.getItem("devquiz-results") || "{}"));
+      const stats = JSON.parse(localStorage.getItem("devquiz-stats") || "{}");
+      setStreak(stats.streak || 0);
+    } catch {}
+  }, []);
+
+  const latest = quizzes[0];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-3">
+          Daily <span className="text-violet-400">Developer</span> Trivia
+        </h1>
+        <p className="text-gray-400 text-lg">
+          Test your programming knowledge. New quiz every day.
+        </p>
+        {streak > 0 && (
+          <div className="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20">
+            <span className="text-orange-400 text-lg">🔥</span>
+            <span className="text-orange-300 text-sm font-medium">{streak} day streak</span>
+          </div>
+        )}
+      </div>
+
+      <div className="mb-10">
+        <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Today&apos;s Quiz</h2>
+        <Link
+          href={`/quiz/${latest.id}`}
+          className="block p-6 rounded-xl border border-violet-500/30 bg-gradient-to-br from-violet-500/10 to-transparent hover:from-violet-500/15 transition-all group"
+        >
+          <div className="flex items-start justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <span className={`text-xs px-2 py-0.5 rounded-full border ${CATEGORY_COLORS[latest.category] || ""}`}>
+                  {latest.category}
+                </span>
+                <span className="text-xs text-gray-500">5 questions</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-100 group-hover:text-violet-300 transition-colors">{latest.title}</h3>
+              <p className="text-gray-400 mt-1">{latest.description}</p>
+            </div>
+            <span className="text-gray-600 group-hover:text-violet-400 transition-colors text-2xl">→</span>
+          </div>
+          {results[latest.id] && (
+            <div className="mt-3 text-sm text-green-400">✓ Completed — Score: {results[latest.id].score}/5</div>
+          )}
+        </Link>
+      </div>
+
+      <div>
+        <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Past Quizzes</h2>
+        <div className="grid gap-3">
+          {quizzes.slice(1).map((quiz) => (
+            <Link key={quiz.id} href={`/quiz/${quiz.id}`} className="p-4 rounded-lg border border-gray-800 hover:border-gray-600 transition-all group">
+              <div className="flex items-start justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className={`text-xs px-2 py-0.5 rounded-full border ${CATEGORY_COLORS[quiz.category] || ""}`}>
+                      {quiz.category}
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      {new Date(quiz.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                    </span>
+                  </div>
+                  <h3 className="font-semibold text-gray-200 group-hover:text-violet-300 transition-colors">{quiz.title}</h3>
+                  <p className="text-sm text-gray-500 mt-0.5">{quiz.description}</p>
+                </div>
+                <span className="text-gray-600 group-hover:text-gray-400 transition-colors shrink-0 text-lg">→</span>
+              </div>
+              {results[quiz.id] && (
+                <div className="mt-2 text-xs text-green-400/80">✓ {results[quiz.id].score}/5</div>
+              )}
+            </Link>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
