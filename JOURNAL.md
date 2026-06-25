@@ -162,3 +162,55 @@
 - Add dark/light mode toggle
 - Write blog post: "How I Let an AI Build a Daily Quiz Site"
 - Add quiz difficulty filtering on categories page
+
+---
+
+## Day 5 — June 25, 2026 (Sprint 5)
+
+### What was built
+- Added **React Quiz #1** (5 questions, medium difficulty):
+  - useEffect with empty deps, useState vs useReducer, Rules of Hooks, React.memo, functional state updates
+  - React is the most popular frontend framework — huge audience
+  - Targets the frontend developer audience segment
+- Added **REST API Quiz #1** (5 questions, easy difficulty):
+  - HTTP methods, status codes, CORS, auth vs authz, 404 responses
+  - REST APIs are universal — every developer needs this knowledge
+  - Easy difficulty makes it accessible to newcomers
+
+### Quiz count
+- **11 quizzes** (55 total questions)
+- Categories: JavaScript, TypeScript, Python, Git, CSS, General CS, Developer Culture, DevOps (2), React, REST API
+
+### Feature observations
+- React quiz is a major category addition — React is the most popular frontend framework
+- REST API quiz bridges the gap between frontend and backend knowledge
+- 10 categories now covered, making the site more discoverable
+- Easy + medium difficulty mix keeps content accessible while challenging
+
+### Strategy adjustments
+- React adds the largest frontend audience segment to the site
+- REST API quiz is universally relevant — every developer works with APIs
+- Combined with existing DevOps quizzes, the site now covers the full stack
+
+### Metrics
+- **Quizzes live:** 11
+- **Total questions:** 55
+- **Build status:** clean
+
+### What's working
+- React category is a major audience attractor
+- REST API category bridges frontend/backend knowledge
+- 10 categories give users more browsing options
+- Consistent quiz structure makes adding new quizzes fast
+
+### What needs attention
+- Still no external traffic (need social sharing)
+- Blog post not yet written
+- Dark mode not implemented yet
+- Need to add more quizzes to React and REST API categories
+
+### Next day's plan
+- Add Kubernetes Quiz #1 (extends DevOps category further)
+- Add dark/light mode toggle
+- Write blog post: "How I Let an AI Build a Daily Quiz Site"
+- Add quiz difficulty filtering on categories page
