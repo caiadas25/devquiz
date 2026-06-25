@@ -5,12 +5,15 @@ export interface QuizQuestion {
   explanation: string;
 }
 
+export type Difficulty = 'easy' | 'medium' | 'hard';
+
 export interface Quiz {
   id: string;
   date: string;
   category: string;
   title: string;
   description: string;
+  difficulty: Difficulty;
   questions: QuizQuestion[];
 }
 
@@ -33,7 +36,7 @@ export interface UserStats {
 }
 
 export const CATEGORIES = [
-  'JavaScript', 'Python', 'Git', 'CSS', 'General CS', 'Developer Culture',
+  'JavaScript', 'TypeScript', 'Python', 'Git', 'CSS', 'General CS', 'Developer Culture',
 ] as const;
 
 export type Category = typeof CATEGORIES[number];

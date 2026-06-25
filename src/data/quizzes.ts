@@ -7,6 +7,7 @@ export const quizzes: Quiz[] = [
     category: "JavaScript",
     title: "JavaScript Quiz #1",
     description: "Test your JS fundamentals — closures, hoisting, and type coercion.",
+    difficulty: "medium",
     questions: [
       {
         question: "What is the output of: `typeof null`?",
@@ -51,6 +52,7 @@ export const quizzes: Quiz[] = [
     category: "Python",
     title: "Python Quiz #1",
     description: "Mutable defaults, list comprehensions, and Pythonic gotchas.",
+    difficulty: "medium",
     questions: [
       {
         question: "What's wrong with `def append_to(item, lst=[]): lst.append(item); return lst`?",
@@ -105,6 +107,7 @@ export const quizzes: Quiz[] = [
     category: "Git",
     title: "Git Quiz #1",
     description: "Branching, rebasing, and undoing mistakes in Git.",
+    difficulty: "easy",
     questions: [
       {
         question: "What's the difference between `git merge` and `git rebase`?",
@@ -169,6 +172,7 @@ export const quizzes: Quiz[] = [
     category: "CSS",
     title: "CSS Quiz #1",
     description: "Flexbox, specificity, and modern CSS layout challenges.",
+    difficulty: "easy",
     questions: [
       {
         question: "In a flex container, what does `justify-content: space-between` do?",
@@ -233,6 +237,7 @@ export const quizzes: Quiz[] = [
     category: "General CS",
     title: "Computer Science Quiz #1",
     description: "Data structures, algorithms, and computational thinking.",
+    difficulty: "medium",
     questions: [
       {
         question: "What is the time complexity of binary search?",
@@ -287,6 +292,7 @@ export const quizzes: Quiz[] = [
     category: "Developer Culture",
     title: "Developer Culture Quiz #1",
     description: "Famous incidents, memes, and lore from the software world.",
+    difficulty: "easy",
     questions: [
       {
         question: "What is the 'left-pad incident'?",
@@ -342,6 +348,71 @@ export const quizzes: Quiz[] = [
         ],
         correct: 1,
         explanation: "Rubber duck debugging is explaining your code aloud to find bugs — the act of articulating often reveals the solution."
+      }
+    ]
+  },
+  {
+    id: "ts-quiz-1",
+    date: "2026-07-01",
+    category: "TypeScript",
+    title: "TypeScript Quiz #1",
+    description: "Type inference, generics, utility types, and the type system.",
+    difficulty: "hard",
+    questions: [
+      {
+        question: "What is the difference between `unknown` and `any` in TypeScript?",
+        options: [
+          "They are identical",
+          "`unknown` is type-safe — you must narrow before using it, `any` disables all checks",
+          "`any` is the safer option",
+          "`unknown` only works with primitives"
+        ],
+        correct: 1,
+        explanation: "`unknown` forces you to perform type checks before using the value. `any` bypasses the type checker entirely, which defeats the purpose of TypeScript."
+      },
+      {
+        question: "What does the `satisfies` operator do in TypeScript 4.9+?",
+        options: [
+          "Asserts a value is truthy",
+          "Validates that an expression matches a type without widening it",
+          "Makes a type optional",
+          "Satisfies a generic constraint"
+        ],
+        correct: 1,
+        explanation: "`satisfies` checks that a value conforms to a type but preserves the narrower inferred type. Unlike a type annotation, it doesn't widen the type."
+      },
+      {
+        question: "What is a conditional type in TypeScript?",
+        options: [
+          "A type that only exists at runtime",
+          "A type expressed as `T extends U ? X : Y` that selects between types",
+          "An optional type parameter",
+          "A type that requires a condition in the constructor"
+        ],
+        correct: 1,
+        explanation: "Conditional types use the pattern `T extends U ? X : Y` to create types that depend on other types."
+      },
+      {
+        question: "What does `Pick<T, K>` do?",
+        options: [
+          "Removes properties K from T",
+          "Creates a new type with only the specified properties K from T",
+          "Makes all properties of T optional",
+          "Picks a random property from T"
+        ],
+        correct: 1,
+        explanation: "`Pick<T, K>` constructs a type by selecting a subset of properties K from type T."
+      },
+      {
+        question: "What is the difference between `interface` and `type` in TypeScript?",
+        options: [
+          "`interface` is faster at runtime",
+          "Interfaces support declaration merging and are generally preferred for object shapes; types are more flexible (unions, intersections, mapped types)",
+          "Types cannot represent objects",
+          "They are completely interchangeable with no differences"
+        ],
+        correct: 1,
+        explanation: "Interfaces can be merged (declaration merging), extended, and are checked structurally. Types support unions, intersections, mapped types, and more. Both use structural typing."
       }
     ]
   }

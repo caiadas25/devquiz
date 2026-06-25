@@ -36,6 +36,7 @@ export default function RootLayout({
             </Link>
             <nav className="ml-auto flex items-center gap-4 text-sm text-gray-400">
               <Link href="/" className="hover:text-gray-200 transition-colors">Quizzes</Link>
+              <Link href="/categories" className="hover:text-gray-200 transition-colors">Categories</Link>
               <Link href="/stats" className="hover:text-gray-200 transition-colors">Stats</Link>
             </nav>
           </div>

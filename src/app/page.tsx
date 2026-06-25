@@ -6,11 +6,18 @@ import { useEffect, useState } from "react";
 
 const CATEGORY_COLORS: Record<string, string> = {
   JavaScript: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
-  Python: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+  TypeScript: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+  Python: "bg-green-500/20 text-green-300 border-green-500/30",
   Git: "bg-orange-500/20 text-orange-300 border-orange-500/30",
   CSS: "bg-pink-500/20 text-pink-300 border-pink-500/30",
-  "General CS": "bg-green-500/20 text-green-300 border-green-500/30",
+  "General CS": "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
   "Developer Culture": "bg-violet-500/20 text-violet-300 border-violet-500/30",
+};
+
+const DIFFICULTY_STYLES: Record<string, string> = {
+  easy: "bg-green-500/15 text-green-400 border-green-500/25",
+  medium: "bg-yellow-500/15 text-yellow-400 border-yellow-500/25",
+  hard: "bg-red-500/15 text-red-400 border-red-500/25",
 };
 
 export default function Home() {
@@ -56,6 +63,9 @@ export default function Home() {
                 <span className={`text-xs px-2 py-0.5 rounded-full border ${CATEGORY_COLORS[latest.category] || ""}`}>
                   {latest.category}
                 </span>
+                <span className={`text-xs px-2 py-0.5 rounded-full border ${DIFFICULTY_STYLES[latest.difficulty] || ""}`}>
+                  {latest.difficulty}
+                </span>
                 <span className="text-xs text-gray-500">5 questions</span>
               </div>
               <h3 className="text-xl font-bold text-gray-100 group-hover:text-violet-300 transition-colors">{latest.title}</h3>
@@ -79,6 +89,9 @@ export default function Home() {
                   <div className="flex items-center gap-2 mb-1">
                     <span className={`text-xs px-2 py-0.5 rounded-full border ${CATEGORY_COLORS[quiz.category] || ""}`}>
                       {quiz.category}
+                    </span>
+                    <span className={`text-xs px-2 py-0.5 rounded-full border ${DIFFICULTY_STYLES[quiz.difficulty] || ""}`}>
+                      {quiz.difficulty}
                     </span>
                     <span className="text-xs text-gray-500">
                       {new Date(quiz.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
