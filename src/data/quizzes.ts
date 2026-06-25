@@ -670,5 +670,70 @@ export const quizzes: Quiz[] = [
         explanation: "404 Not Found is the correct status code. Returning 200 with an empty body confuses clients and makes debugging harder. A descriptive error message helps developers fix issues."
       }
     ]
+  },
+  {
+    id: "security-quiz-1",
+    date: "2026-07-04",
+    category: "Developer Culture",
+    title: "Web Security Quiz #1",
+    description: "XSS, CSRF, SQL injection, and other security fundamentals every developer should know.",
+    difficulty: "medium",
+    questions: [
+      {
+        question: "What does XSS stand for in web security?",
+        options: [
+          "Cross-Site Scripting",
+          "Cross-Server Signing",
+          "Cross-System Storage",
+          "Cross-Service Synchronization"
+        ],
+        correct: 0,
+        explanation: "XSS (Cross-Site Scripting) allows attackers to inject malicious scripts into web pages viewed by other users. It's one of the most common web vulnerabilities."
+      },
+      {
+        question: "Which HTTP header helps prevent clickjacking attacks?",
+        options: [
+          "Content-Security-Policy",
+          "X-Frame-Options",
+          "Strict-Transport-Security",
+          "X-Content-Type-Options"
+        ],
+        correct: 1,
+        explanation: "X-Frame-Options prevents your page from being embedded in an iframe on another site, which is how clickjacking attacks work."
+      },
+      {
+        question: "What is the primary purpose of CSRF tokens?",
+        options: [
+          "Encrypting user passwords",
+          "Preventing cross-site request forgery on forms",
+          "Validating JSON Web Tokens",
+          "Rate limiting API requests"
+        ],
+        correct: 1,
+        explanation: "CSRF tokens are unique, unpredictable values embedded in forms. They ensure that form submissions come from your actual site, not from a malicious third party."
+      },
+      {
+        question: "Which is the safest way to prevent SQL injection?",
+        options: [
+          "Use stored procedures only",
+          "Escape all user input with addslashes()",
+          "Use parameterized queries / prepared statements",
+          "Validate input with regex"
+        ],
+        correct: 2,
+        explanation: "Parameterized queries (prepared statements) separate SQL logic from data. The database treats user input as data, never as executable SQL code."
+      },
+      {
+        question: "What does CORS stand for?",
+        options: [
+          "Cross-Origin Resource Sharing",
+          "Cross-OS Runtime Security",
+          "Central Origin Request System",
+          "Cross-Origin Response Signing"
+        ],
+        correct: 0,
+        explanation: "CORS (Cross-Origin Resource Sharing) is a browser mechanism that controls which origins can access resources. It's a security feature that prevents unauthorized cross-origin requests."
+      }
+    ]
   }
 ];
