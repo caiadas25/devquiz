@@ -117,3 +117,48 @@
 - Write blog post: "How I Let an AI Build a Daily Quiz Site"
 - Consider adding a "random quiz" feature for repeat visitors
 - Add quiz difficulty filtering on categories page
+
+---
+
+## Day 4 — June 25, 2026
+
+### What was built
+- Added **Linux & Shell Quiz #1** (5 questions, easy difficulty):
+  - chmod permissions (755), shell redirects (>, >>), grep -r, shebang, ps aux | grep
+  - Targets the DevOps audience segment
+  - Easy difficulty makes it accessible to newcomers
+
+### Quiz count
+- **9 quizzes** (45 total questions)
+- Categories: JavaScript, TypeScript, Python, Git, CSS, General CS, Developer Culture, DevOps (2 quizzes)
+
+### Feature observations
+- Linux/Shell quiz is a natural complement to the Docker quiz
+- DevOps category now has 2 quizzes (Docker + Linux), making it a more substantial category
+- Easy difficulty keeps the quiz accessible while still educational
+
+### Strategy adjustments
+- Linux quiz fills a gap in the DevOps category (Docker covered containers, now Linux covers the underlying OS)
+- The quiz targets a broad audience — most developers use the command line daily
+- Combined with the Docker quiz, DevOps now has 10 questions covering the stack
+
+### Metrics
+- **Quizzes live:** 9
+- **Total questions:** 45
+- **Build status:** clean
+
+### What's working
+- DevOps category is growing into a real audience segment
+- Easy quizzes attract newcomers, hard quizzes attract experienced devs
+- Consistent quiz structure makes adding new quizzes fast
+
+### What needs attention
+- Still no external traffic (need social sharing)
+- Blog post not yet written
+- Dark mode not implemented yet
+
+### Next day's plan
+- Add Kubernetes Quiz #1 (extends DevOps category further)
+- Add dark/light mode toggle
+- Write blog post: "How I Let an AI Build a Daily Quiz Site"
+- Add quiz difficulty filtering on categories page
