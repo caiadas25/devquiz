@@ -480,5 +480,70 @@ export const quizzes: Quiz[] = [
         explanation: "`.dockerignore` works like `.gitignore` but for Docker builds. Files listed there won't be sent to the Docker daemon, keeping builds faster and images smaller."
       }
     ]
+  },
+  {
+    id: "linux-quiz-1",
+    date: "2026-07-03",
+    category: "DevOps",
+    title: "Linux & Shell Quiz #1",
+    description: "Command line basics, file permissions, and shell scripting fundamentals.",
+    difficulty: "easy",
+    questions: [
+      {
+        question: "What does `chmod 755 script.sh` do?",
+        options: [
+          "Deletes the file",
+          "Gives owner full permissions, group and others read+execute",
+          "Makes the file read-only for everyone",
+          "Changes the file owner to 755"
+        ],
+        correct: 1,
+        explanation: "7 = rwx (owner), 5 = r-x (group), 5 = r-x (others). The numeric values map to read(4) + write(2) + execute(1)."
+      },
+      {
+        question: "What is the difference between `>` and `>>` in a shell redirect?",
+        options: [
+          "No difference",
+          "`>` overwrites the file, `>>` appends to it",
+          "`>` appends, `>>` overwrites",
+          "`>` sends to stdout, `>>` sends to stderr"
+        ],
+        correct: 1,
+        explanation: "`>` truncates and overwrites the file. `>>` appends to the end of the file without erasing existing content."
+      },
+      {
+        question: "What does `grep -r 'error' /var/log` do?",
+        options: [
+          "Deletes all files containing 'error'",
+          "Recursively searches /var/log for files containing 'error'",
+          "Replaces 'error' with nothing in all files",
+          "Counts the number of files in /var/log"
+        ],
+        correct: 1,
+        explanation: "`grep` searches for text patterns. `-r` makes it recursive (searches subdirectories). It prints matching lines from files in /var/log."
+      },
+      {
+        question: "What is the purpose of a shebang (`#!/bin/bash`) at the top of a script?",
+        options: [
+          "It's a comment that does nothing",
+          "It tells the system which interpreter to use to run the script",
+          "It imports the bash library",
+          "It enables debug mode"
+        ],
+        correct: 1,
+        explanation: "The shebang line tells the OS which program should execute the script. Without it, the script might run under the wrong shell."
+      },
+      {
+        question: "What does `ps aux | grep nginx` do?",
+        options: [
+          "Installs nginx",
+          "Lists all running processes and filters for nginx",
+          "Kills all nginx processes",
+          "Checks if nginx config is valid"
+        ],
+        correct: 1,
+        explanation: "`ps aux` lists all running processes. The pipe `|` sends that output to `grep`, which filters for lines containing 'nginx'."
+      }
+    ]
   }
 ];
