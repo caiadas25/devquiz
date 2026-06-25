@@ -415,5 +415,70 @@ export const quizzes: Quiz[] = [
         explanation: "Interfaces can be merged (declaration merging), extended, and are checked structurally. Types support unions, intersections, mapped types, and more. Both use structural typing."
       }
     ]
+  },
+  {
+    id: "docker-quiz-1",
+    date: "2026-07-02",
+    category: "DevOps",
+    title: "Docker Quiz #1",
+    description: "Containers, images, volumes, and Dockerfile best practices.",
+    difficulty: "medium",
+    questions: [
+      {
+        question: "What is the difference between a Docker image and a Docker container?",
+        options: [
+          "They are the same thing",
+          "An image is a read-only template; a container is a running instance of an image",
+          "A container is stored on disk; an image runs in memory",
+          "Images are for production, containers are for development"
+        ],
+        correct: 1,
+        explanation: "A Docker image is a blueprint (like a class). A container is a live, running instance of that image (like an object)."
+      },
+      {
+        question: "What does the `docker build -t myapp .` command do?",
+        options: [
+          "Runs the myapp container",
+          "Builds a Docker image from the Dockerfile in the current directory and tags it 'myapp'",
+          "Downloads the myapp image from Docker Hub",
+          "Creates a new container named myapp"
+        ],
+        correct: 1,
+        explanation: "`docker build -t name .` builds an image from the Dockerfile in the current directory and gives it the tag name."
+      },
+      {
+        question: "What is a Dockerfile?",
+        options: [
+          "A configuration file for Docker Desktop",
+          "A text file with instructions to build a Docker image",
+          "A log file of Docker container activity",
+          "A YAML file for Docker Compose"
+        ],
+        correct: 1,
+        explanation: "A Dockerfile contains step-by-step instructions (FROM, RUN, COPY, etc.) that Docker follows to assemble an image."
+      },
+      {
+        question: "What does `docker volume` do?",
+        options: [
+          "Increases container memory",
+          "Manages persistent data storage that survives container restarts",
+          "Creates a new network bridge",
+          "Downloads image layers"
+        ],
+        correct: 1,
+        explanation: "Volumes provide persistent storage that lives beyond a container's lifecycle. Data in a volume survives restarts, removals, and rebuilds."
+      },
+      {
+        question: "What is the purpose of `.dockerignore`?",
+        options: [
+          "It prevents Docker from starting",
+          "It specifies files and directories to exclude from the build context",
+          "It hides containers from `docker ps`",
+          "It ignores errors during build"
+        ],
+        correct: 1,
+        explanation: "`.dockerignore` works like `.gitignore` but for Docker builds. Files listed there won't be sent to the Docker daemon, keeping builds faster and images smaller."
+      }
+    ]
   }
 ];

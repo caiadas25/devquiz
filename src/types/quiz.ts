@@ -36,7 +36,7 @@ export interface UserStats {
 }
 
 export const CATEGORIES = [
-  'JavaScript', 'TypeScript', 'Python', 'Git', 'CSS', 'General CS', 'Developer Culture',
+  'JavaScript', 'TypeScript', 'Python', 'Git', 'CSS', 'General CS', 'Developer Culture', 'DevOps',
 ] as const;
 
 export type Category = typeof CATEGORIES[number];
