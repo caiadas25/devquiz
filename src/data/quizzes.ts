@@ -4,6 +4,7 @@ import { dockerQuiz } from "./quiz-docker-1";
 import { githubActionsQuiz } from "./quiz-github-actions-1";
 import { sqlQuiz } from "./quiz-sql-1";
 import { rustQuiz } from "./quiz-rust-1";
+import { typescriptQuiz } from "./quiz-typescript-1";
 
 export const quizzes: Quiz[] = [
   awsQuiz,
@@ -11,6 +12,7 @@ export const quizzes: Quiz[] = [
   githubActionsQuiz,
   sqlQuiz,
   rustQuiz,
+  typescriptQuiz,
   {
     id: "js-quiz-1",
     date: "2026-06-25",

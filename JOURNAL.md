@@ -1,13 +1,23 @@
 # DevQuiz — Daily Developer Trivia
 
-Daily programming quizzes. JavaScript, Python, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
+Daily programming quizzes. JavaScript, Python, TypeScript, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
 
-## Sprint H — June 26, 2026 (Growth Sprint — Quick Win)
+## Sprint I — June 26, 2026 (Growth Sprint — Quick Win)
 
 ### What was done
-- Added Rust Quiz #1 (5 questions, medium difficulty):
-  - Ownership and move semantics
-  - Shared vs mutable references (&T vs &mut T)
+- Added TypeScript Quiz #1 (5 questions, medium difficulty):
+  - `keyof` operator
+  - `unknown` vs `any`
+  - `Partial<T>` utility type
+  - Type guards
+  - `Pick<T, K>` utility type
+- Targets "typescript quiz online" and "typescript quiz" keywords
+- Total: 22 quizzes, 110 questions
+
+### Keywords targeted
+- "typescript quiz online" (new quiz)
+- "typescript type quiz" (quiz content)
+- "test typescript knowledge" (quiz content)
   - Lifetime annotations
   - The ? operator
   - Copy trait behavior
