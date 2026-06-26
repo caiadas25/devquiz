@@ -775,5 +775,70 @@ export const quizzes: Quiz[] = [
         explanation: "`kubectl get pods` only shows pods in the current namespace. Add `--all-namespaces` to see pods across all namespaces in the cluster."
       }
     ]
+  },
+  {
+    id: "react-hooks-quiz-1",
+    date: "2026-07-04",
+    category: "React",
+    title: "React Hooks Quiz #1",
+    description: "useState, useEffect, useRef, useCallback — test your hooks fundamentals.",
+    difficulty: "medium",
+    questions: [
+      {
+        question: "When does `useEffect` run by default?",
+        options: [
+          "Only once when the component mounts",
+          "After every render",
+          "Only when state changes",
+          "Before the component renders"
+        ],
+        correct: 1,
+        explanation: "Without a dependency array, useEffect runs after every render. With an empty array [], it runs only once on mount. With dependencies, it runs when those values change."
+      },
+      {
+        question: "What is the correct way to update state based on the previous value?",
+        options: [
+          "`setCount(count + 1)`",
+          "`setCount(prev => prev + 1)`",
+          "`count = count + 1`",
+          "`this.setState({ count: count + 1 })`"
+        ],
+        correct: 1,
+        explanation: "Using the functional updater `setCount(prev => prev + 1)` ensures you're working with the latest state value, which is critical when multiple updates happen in quick succession."
+      },
+      {
+        question: "What does `useRef` return?",
+        options: [
+          "A value that triggers re-renders when changed",
+          "An object with a `.current` property that persists across renders",
+          "A memoized version of a value",
+          "A DOM element reference"
+        ],
+        correct: 1,
+        explanation: "useRef returns a mutable object `{ current: value }` that persists across renders without causing re-renders. It's commonly used for DOM references and storing mutable values."
+      },
+      {
+        question: "Why must React hooks only be called at the top level?",
+        options: [
+          "They need to access global state",
+          "React relies on call order to match state to components",
+          "They require DOM access",
+          "JavaScript doesn't allow function calls inside conditionals"
+        ],
+        correct: 1,
+        explanation: "React tracks hook state by call order. If you call hooks conditionally, the order changes between renders and React can't match state correctly. This is called the Rules of Hooks."
+      },
+      {
+        question: "What does `useCallback` do?",
+        options: [
+          "Caches the result of an expensive calculation",
+          "Returns a memoized version of a callback function",
+          "Prevents the component from re-rendering",
+          "Creates a new function on every render"
+        ],
+        correct: 1,
+        explanation: "useCallback returns a memoized version of the function that only changes when its dependencies change. This prevents unnecessary re-renders of child components that receive the function as a prop."
+      }
+    ]
   }
 ];
