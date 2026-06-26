@@ -15,7 +15,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   DevOps: "bg-purple-500/20 text-purple-300 border-purple-500/30",
   "REST API": "bg-teal-500/20 text-teal-300 border-teal-500/30",
   React: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-  Node.js: "bg-lime-500/20 text-lime-300 border-lime-500/30",
+  "Node.js": "bg-lime-500/20 text-lime-300 border-lime-500/30",
   Kotlin: "bg-purple-400/20 text-purple-300 border-purple-400/30",
 };
 
