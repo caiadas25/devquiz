@@ -4,10 +4,32 @@ Daily programming quizzes. JavaScript, Python, Git, CSS, Docker, AWS, GitHub Act
 
 ---
 
-## Sprint G — June 27, 2026 (Growth Sprint — Quick Wins)
+## Sprint C — June 27, 2026 (Growth Sprint — Quick Wins)
 
 ### What was done
-- Added GitHub Actions Quiz #1 (5 questions, medium difficulty):
+- Added SQL Quiz #1 (5 questions, medium difficulty):
+  - INNER JOIN vs LEFT JOIN
+  - Database indexing
+  - Normalization
+  - HAVING vs WHERE clause
+  - Primary keys
+- Total: 20 quizzes, 100 questions (was 19, 95)
+
+### Keywords targeted
+- "SQL quiz online" (new quiz page)
+- "test your SQL knowledge" (quiz content)
+- "SQL joins quiz" (quiz content)
+
+### Pages added/optimized
+- NEW: SQL Quiz #1 (5 questions)
+
+### Current stats
+- **Quizzes:** 20 (was 19)
+- **Total questions:** 100 (was 95)
+
+---
+
+## Sprint G — June 27, 2026 (Growth Sprint — Quick Wins)
   - Workflow file location and syntax
   - Secrets and environment variables
   - Push triggers and branch filtering
