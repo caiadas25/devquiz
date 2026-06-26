@@ -838,6 +838,71 @@ export const quizzes: Quiz[] = [
         ],
         correct: 1,
         explanation: "useCallback returns a memoized version of the function that only changes when its dependencies change. This prevents unnecessary re-renders of child components that receive the function as a prop."
+      },
+    ]
+  },
+  {
+    id: "nodejs-quiz-2",
+    date: "2026-06-26",
+    category: "Node.js",
+    title: "Node.js Quiz #2",
+    description: "Express middleware, event loop, and Node.js internals.",
+    difficulty: "medium",
+    questions: [
+      {
+        question: "What does `app.use()` do in Express?",
+        options: [
+          "Defines a single route handler",
+          "Registers middleware that runs for every request",
+          "Sends a response to the client",
+          "Creates a new Express router"
+        ],
+        correct: 1,
+        explanation: "`app.use()` registers middleware that executes for every incoming request (or for a specific path if one is provided). It's the primary way to add logging, authentication, CORS, and other cross-cutting concerns."
+      },
+      {
+        question: "What is the order of middleware execution in Express?",
+        options: [
+          "Last registered, first executed",
+          "Random order",
+          "First registered, first executed (in registration order)",
+          "All middleware runs in parallel"
+        ],
+        correct: 2,
+        explanation: "Express middleware executes in the exact order it's registered with `app.use()`. This is why order matters — e.g., body parser must come before route handlers that need the parsed body."
+      },
+      {
+        question: "What does `next()` do in Express middleware?",
+        options: [
+          "Sends the response to the client",
+          "Skips to the next route",
+          "Calls the next middleware function in the chain",
+          "Restarts the server"
+        ],
+        correct: 2,
+        explanation: "`next()` passes control to the next middleware in the chain. Without it, the request hangs. You can also call `next('route')` to skip remaining handlers for the current route."
+      },
+      {
+        question: "What is the purpose of `app.use(express.json())`?",
+        options: [
+          "Formats JSON responses",
+          "Parses incoming JSON request bodies",
+          "Validates JSON data",
+          "Compresses JSON output"
+        ],
+        correct: 1,
+        explanation: "`express.json()` is built-in middleware that parses incoming requests with JSON payloads. It reads the request body and makes it available as `req.body`. Without it, `req.body` is undefined."
+      },
+      {
+        question: "What happens if you don't call `next()` or send a response in Express middleware?",
+        options: [
+          "The request times out and Express sends a default response",
+          "The server crashes immediately",
+          "The request hangs indefinitely (until client timeout)",
+          "Express automatically skips to the next route"
+        ],
+        correct: 2,
+        explanation: "If neither `next()` is called nor a response is sent, the request will hang until the client times out. Express doesn't have automatic timeouts — this is a common cause of production hangs."
       }
     ]
   }

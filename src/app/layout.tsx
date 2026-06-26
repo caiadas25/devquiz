@@ -7,10 +7,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "DevQuiz — Daily Developer Trivia",
   description:
-    "Test your programming knowledge with daily quizzes. JavaScript, Python, Git, CSS, Computer Science, and developer culture.",
+    "Test your programming knowledge with daily quizzes. JavaScript, Python, Git, CSS, React, Node.js, Computer Science, and developer culture.",
   openGraph: {
     title: "DevQuiz — Daily Developer Trivia",
-    description: "Daily programming quizzes. Test your knowledge, track your streak, share your score.",
+    description: "Daily programming quizzes. JavaScript, Python, React, Node.js, Git — test your knowledge, track your streak, share your score.",
     siteName: "DevQuiz",
     type: "website",
   },
