@@ -2,6 +2,23 @@
 
 Daily programming quizzes. JavaScript, Python, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
 
+## Sprint H — June 26, 2026 (Growth Sprint — Quick Win)
+
+### What was done
+- Added Rust Quiz #1 (5 questions, medium difficulty):
+  - Ownership and move semantics
+  - Shared vs mutable references (&T vs &mut T)
+  - Lifetime annotations
+  - The ? operator
+  - Copy trait behavior
+- Targets "Rust quiz online" keyword
+- Updated layout metadata to include Rust
+
+### Current stats
+- **Quizzes:** 21 (was 20)
+- **Total questions:** 105 (was 100)
+- **Categories:** JavaScript, TypeScript, Python, Git, CSS, General CS, Developer Culture, DevOps (3), React (2), REST API, Node.js (2), Rust
+
 ---
 
 ## Sprint C — June 27, 2026 (Growth Sprint — Quick Wins)
