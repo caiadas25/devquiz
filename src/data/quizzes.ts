@@ -1,6 +1,8 @@
 import { Quiz } from "@/types/quiz";
+import { awsQuiz } from "./quiz-aws-1";
 
 export const quizzes: Quiz[] = [
+  awsQuiz,
   {
     id: "js-quiz-1",
     date: "2026-06-25",
