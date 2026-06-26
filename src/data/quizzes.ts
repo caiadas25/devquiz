@@ -1,10 +1,12 @@
 import { Quiz } from "@/types/quiz";
 import { awsQuiz } from "./quiz-aws-1";
 import { dockerQuiz } from "./quiz-docker-1";
+import { githubActionsQuiz } from "./quiz-github-actions-1";
 
 export const quizzes: Quiz[] = [
   awsQuiz,
   dockerQuiz,
+  githubActionsQuiz,
   {
     id: "js-quiz-1",
     date: "2026-06-25",

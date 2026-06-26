@@ -1,6 +1,32 @@
 # DevQuiz — Daily Developer Trivia
 
-Daily programming quizzes. JavaScript, Python, Git, CSS, Docker, AWS, and developer culture.
+Daily programming quizzes. JavaScript, Python, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
+
+---
+
+## Sprint G — June 27, 2026 (Growth Sprint — Quick Wins)
+
+### What was done
+- Added GitHub Actions Quiz #1 (5 questions, medium difficulty):
+  - Workflow file location and syntax
+  - Secrets and environment variables
+  - Push triggers and branch filtering
+  - Job dependencies with `needs`
+  - Matrix strategy for parallel testing
+- Total: 19 quizzes, 95 questions (was 18, 90)
+
+### Keywords targeted
+- "GitHub Actions quiz" (new quiz page)
+- "GitHub Actions workflow quiz" (quiz content)
+- "test your GitHub Actions knowledge" (quiz content)
+
+### Pages added/optimized
+- NEW: GitHub Actions Quiz #1 (5 questions)
+
+### Current stats
+- **Quizzes:** 19 (was 18)
+- **Total questions:** 95 (was 90)
+- **Categories:** JavaScript, TypeScript, Python, Git, CSS, General CS, Developer Culture (2), DevOps (5), React (2), REST API, Node.js (2)
 
 ---
 
