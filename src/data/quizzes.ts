@@ -80,24 +80,19 @@ export const quizzes: Quiz[] = [
           "An indentation enforcement tool"
         ],
         correct: 1,
-        explanation: "The Global Interpreter Lock allows only one thread to execute Python bytecode at a time."
+        explanation: "The Global Interpreter Lock (GIL) ensures only one thread executes Python bytecode at a time, limiting true parallelism in CPU-bound tasks."
       },
       {
-        question: "What does `*` do in `def foo(a, *args)`?",
-        options: [
-          "Declares a pointer variable",
-          "Collects extra positional arguments into a tuple",
-          "Makes the argument optional",
-          "Enables pointer arithmetic"
-        ],
+        question: "What is the output of `print(1, 2, 3, sep=' - ')`?",
+        options: ["1 2 3", "1 - 2 - 3", "1-2-3", "1, 2, 3"],
         correct: 1,
-        explanation: "The `*args` syntax collects any extra positional arguments into a tuple."
+        explanation: "The `sep` parameter specifies the separator between arguments. `print(1, 2, 3, sep=' - ')` outputs `1 - 2 - 3`."
       },
       {
-        question: "What is the output of `print(type(1/2))` in Python 3?",
-        options: ["<class 'int'>", "<class 'float'>", "<class 'division'>", "<class 'decimal'>"],
-        correct: 1,
-        explanation: "In Python 3, `/` always returns a float. Use `//` for integer division."
+        question: "Which is the most Pythonic way to check if a list is empty?",
+        options: ["`if len(lst) == 0:`", "`if lst == []:`", "`if not lst:`", "`if lst is None:`"],
+        correct: 2,
+        explanation: "`if not lst:` is the most Pythonic. Empty sequences are falsy in Python, so this is clean, readable, and follows PEP 8."
       }
     ]
   },
@@ -106,63 +101,63 @@ export const quizzes: Quiz[] = [
     date: "2026-06-27",
     category: "Git",
     title: "Git Quiz #1",
-    description: "Branching, rebasing, and undoing mistakes in Git.",
-    difficulty: "easy",
+    description: "Branching, merging, rebasing, and common Git workflows.",
+    difficulty: "medium",
     questions: [
       {
-        question: "What's the difference between `git merge` and `git rebase`?",
+        question: "What does `git rebase` do differently from `git merge`?",
         options: [
-          "No difference",
-          "Rebase rewrites commit history to create a linear timeline",
-          "Merge is faster than rebase",
-          "Rebase creates a merge commit"
+          "Rebase creates a merge commit, merge doesn't",
+          "Rebase replays commits on top of another branch, keeping a linear history",
+          "Rebase only works on remote branches",
+          "Rebase deletes the source branch"
         ],
         correct: 1,
-        explanation: "Rebase replays commits on top of another branch, creating a linear history."
-      },
-      {
-        question: "How do you undo the last commit but keep changes?",
-        options: [
-          "git reset --hard HEAD~1",
-          "git reset HEAD~1",
-          "git revert HEAD",
-          "git undo"
-        ],
-        correct: 1,
-        explanation: "`git reset HEAD~1` moves HEAD back one commit but leaves changes staged."
+        explanation: "Rebase takes your commits and replays them one-by-one on top of the target branch, creating a clean linear history without merge commits."
       },
       {
         question: "What does `git stash` do?",
         options: [
-          "Deletes uncommitted changes permanently",
-          "Saves uncommitted changes temporarily for later use",
-          "Pushes changes to a secret branch",
-          "Creates a backup of the entire repository"
+          "Permanently deletes uncommitted changes",
+          "Saves uncommitted changes temporarily so you can work on something else",
+          "Pushes changes to the remote repository",
+          "Creates a new branch from current changes"
         ],
         correct: 1,
-        explanation: "`git stash` temporarily shelves uncommitted changes so you can work on something else."
+        explanation: "Git stash temporarily shelves your working directory changes. Use `git stash pop` to bring them back later."
       },
       {
-        question: "What is a detached HEAD state?",
+        question: "What is the difference between `git reset --soft` and `git reset --hard`?",
         options: [
-          "When Git loses connection to the remote",
-          "When HEAD points to a commit directly instead of a branch",
-          "When you have merge conflicts",
-          "When the repository is corrupted"
+          "Soft keeps staging area and working tree, hard resets everything",
+          "Soft resets the remote, hard only resets local",
+          "There is no difference",
+          "Hard keeps staging area, soft resets everything"
         ],
-        correct: 1,
-        explanation: "Detached HEAD means HEAD points to a specific commit rather than a branch name."
+        correct: 0,
+        explanation: "`--soft` moves HEAD but keeps your changes staged. `--hard` moves HEAD and discards all changes — use with caution."
       },
       {
         question: "What does `git cherry-pick <commit-hash>` do?",
         options: [
           "Deletes a specific commit",
-          "Applies a specific commit from another branch onto the current branch",
-          "Compares two commits",
-          "Forks the repository"
+          "Applies the changes from a specific commit to your current branch",
+          "Shows the diff of a commit",
+          "Reverts a specific commit"
         ],
         correct: 1,
-        explanation: "`git cherry-pick` takes a single commit from another branch and applies it to your current branch."
+        explanation: "Cherry-pick takes the changes introduced by a specific commit and applies them as a new commit on your current branch."
+      },
+      {
+        question: "What is a detached HEAD in Git?",
+        options: [
+          "HEAD is pointing to a specific commit instead of a branch",
+          "The repository is corrupted",
+          "HEAD has been deleted",
+          "HEAD is pointing to the latest tag"
+        ],
+        correct: 0,
+        explanation: "Detached HEAD means HEAD points directly to a commit hash instead of a branch name. Changes made here won't be on any branch unless you create one."
       }
     ]
   },
@@ -171,63 +166,53 @@ export const quizzes: Quiz[] = [
     date: "2026-06-28",
     category: "CSS",
     title: "CSS Quiz #1",
-    description: "Flexbox, specificity, and modern CSS layout challenges.",
-    difficulty: "easy",
+    description: "Flexbox, specificity, selectors, and modern CSS features.",
+    difficulty: "medium",
     questions: [
       {
-        question: "In a flex container, what does `justify-content: space-between` do?",
-        options: [
-          "Centers items with equal space around",
-          "Places first item at start, last at end, equal space between",
-          "Makes all items the same width",
-          "Adds padding between each item"
-        ],
+        question: "What is the default value of `flex-direction`?",
+        options: ["column", "row", "row-reverse", "column-reverse"],
         correct: 1,
-        explanation: "`space-between` distributes items evenly — first at start, last at end, equal space between."
+        explanation: "The default flex-direction is `row`, which lays out flex items horizontally from left to right."
       },
       {
-        question: "What is CSS specificity?",
-        options: [
-          "How important a property is for rendering",
-          "The algorithm that determines which CSS rule wins when multiple apply",
-          "The order CSS files are loaded",
-          "A measure of how many selectors are in a stylesheet"
-        ],
-        correct: 1,
-        explanation: "Specificity calculates the weight of a CSS selector. Inline styles > IDs > classes > elements."
+        question: "Which CSS property creates gaps between flex items?",
+        options: ["margin", "padding", "gap", "spacing"],
+        correct: 2,
+        explanation: "`gap` (formerly `grid-gap`) works in both flexbox and grid layouts to create consistent spacing between items."
       },
       {
-        question: "What does `position: sticky` do?",
+        question: "What does `!important` do in CSS?",
         options: [
-          "Makes an element invisible",
-          "Alternates between relative and fixed based on scroll",
-          "Fixes the element to the viewport",
-          "Removes the element from document flow"
+          "Makes the property apply to all elements",
+          "Gives the declaration highest specificity priority",
+          "Prevents the property from being overridden",
+          "Applies the property to the parent element"
         ],
         correct: 1,
-        explanation: "`position: sticky` toggles between `relative` and `fixed` based on scroll position."
+        explanation: "`!important` overrides normal specificity rules. It should be used sparingly as it makes debugging harder."
       },
       {
-        question: "What is the CSS `z-index` property used for?",
+        question: "What is the CSS specificity order (lowest to highest)?",
         options: [
-          "Setting text size",
-          "Controlling the stacking order of positioned elements",
-          "Setting zoom level",
-          "Defining grid layout rows"
+          "Element > Class > ID > Inline > !important",
+          "ID > Class > Element > Inline > !important",
+          "Inline > !important > ID > Class > Element",
+          "Class > Element > ID > Inline > !important"
         ],
-        correct: 1,
-        explanation: "`z-index` controls the vertical stacking order of positioned elements."
+        correct: 0,
+        explanation: "Specificity from lowest: element selectors, class/attribute selectors, ID selectors, inline styles, then !important overrides everything."
       },
       {
         question: "What does `box-sizing: border-box` do?",
         options: [
-          "Adds borders to all elements",
-          "Includes padding and border in the element's total width/height",
-          "Removes all spacing from elements",
-          "Creates a 3D box effect"
+          "Adds a border to the element",
+          "Includes padding and border in the element's total width and height",
+          "Removes all spacing from the element",
+          "Makes the element a fixed size"
         ],
         correct: 1,
-        explanation: "With `border-box`, width/height includes padding and border, not just content."
+        explanation: "With `border-box`, the width/height you set includes padding and border. This makes layout calculations much more predictable."
       }
     ]
   },
@@ -236,53 +221,48 @@ export const quizzes: Quiz[] = [
     date: "2026-06-29",
     category: "General CS",
     title: "Computer Science Quiz #1",
-    description: "Data structures, algorithms, and computational thinking.",
-    difficulty: "medium",
+    description: "Data structures, algorithms, Big O notation, and CS fundamentals.",
+    difficulty: "hard",
     questions: [
       {
         question: "What is the time complexity of binary search?",
-        options: ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+        options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
         correct: 1,
-        explanation: "Binary search halves the search space each step on a sorted array."
+        explanation: "Binary search halves the search space each step. For n elements, you need at most log₂(n) comparisons."
+      },
+      {
+        question: "What is the difference between a stack and a queue?",
+        options: [
+          "Stack is FIFO, queue is LIFO",
+          "Stack is LIFO, queue is FIFO",
+          "Both are FIFO",
+          "Both are LIFO"
+        ],
+        correct: 1,
+        explanation: "A stack is Last In, First Out (LIFO) — like a plate stack. A queue is First In, First Out (FIFO) — like a line at a store."
       },
       {
         question: "What is a hash table's average-case lookup time?",
         options: ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
         correct: 2,
-        explanation: "Hash tables map keys directly to array indices, giving O(1) average-case lookup."
+        explanation: "Hash tables provide O(1) average-case lookups by hashing the key directly to an array index. Worst case (all collisions) is O(n)."
       },
       {
-        question: "What is the difference between a stack and a queue?",
+        question: "What is recursion?",
         options: [
-          "Stacks are faster than queues",
-          "Stack is LIFO, queue is FIFO",
-          "Queues can only hold strings",
-          "Stacks use more memory"
+          "A loop that runs indefinitely",
+          "A function that calls itself with a base case to stop",
+          "A way to reverse an array",
+          "A sorting algorithm"
         ],
         correct: 1,
-        explanation: "Stack uses LIFO ordering, queue uses FIFO ordering."
+        explanation: "Recursion is when a function calls itself. Every recursive function needs a base case (stop condition) to prevent infinite loops."
       },
       {
-        question: "What does 'recursion' mean in programming?",
-        options: [
-          "Looping through an array backwards",
-          "A function that calls itself",
-          "Reverse-sorting a list",
-          "Using a recursive regex"
-        ],
-        correct: 1,
-        explanation: "Recursion is when a function calls itself to solve smaller instances of the same problem."
-      },
-      {
-        question: "What is Big O notation used for?",
-        options: [
-          "Describing code style",
-          "Measuring algorithm performance and scalability",
-          "Naming variables",
-          "Documenting code"
-        ],
-        correct: 1,
-        explanation: "Big O describes the upper bound of an algorithm's time or space complexity."
+        question: "What is the space complexity of merge sort?",
+        options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+        correct: 2,
+        explanation: "Merge sort requires O(n) additional space for the temporary arrays used during the merge step. This is its main drawback compared to in-place sorts."
       }
     ]
   },
@@ -291,63 +271,58 @@ export const quizzes: Quiz[] = [
     date: "2026-06-30",
     category: "Developer Culture",
     title: "Developer Culture Quiz #1",
-    description: "Famous incidents, memes, and lore from the software world.",
+    description: "Famous bugs, tech history, memes, and the stories behind the tools we use.",
     difficulty: "easy",
     questions: [
       {
-        question: "What is the 'left-pad incident'?",
+        question: "What was the cost of the Ariane 5 explosion in 1996?",
         options: [
-          "When a developer left-padded their resume",
-          "When a 11-line npm package was unpublished, breaking thousands of builds",
-          "A CSS centering technique",
-          "When Git lost data"
+          "$1 million",
+          "$10 million",
+          "$370 million",
+          "$1 billion"
         ],
-        correct: 1,
-        explanation: "In 2016, a developer unpublished the `left-pad` package from npm, breaking thousands of projects."
+        correct: 2,
+        explanation: "The Ariane 5 rocket exploded 37 seconds after launch due to a 64-bit to 16-bit integer overflow in the inertial reference system. The software was reused from Ariane 4 without testing for the new rocket's higher velocity."
       },
       {
-        question: "What is the '10x developer' myth?",
+        question: "Who coined the term 'debugging'?",
         options: [
-          "Developers who write 10x more code",
-          "The idea that some developers are 10x more productive than others",
-          "A coding speed test",
-          "A JavaScript library"
+          "Linus Torvalds",
+          "Grace Hopper",
+          "Ada Lovelace",
+          "Dennis Ritchie"
         ],
         correct: 1,
-        explanation: "The '10x developer' suggests some engineers are dramatically more productive."
+        explanation: "Grace Hopper found a moth stuck in a relay of the Harvard Mark II computer in 1947. She taped it into the logbook with the note 'first actual case of bug being found.'"
       },
       {
-        question: "What does 'cargo cult programming' mean?",
-        options: [
-          "Programming on ships",
-          "Copying code without understanding why it works",
-          "A programming language for logistics",
-          "Agile methodology"
-        ],
+        question: "What is the world's most widely used programming language (by many measures)?",
+        options: ["Python", "JavaScript", "Java", "C"],
         correct: 1,
-        explanation: "Cargo cult programming is adding code that seems to work without understanding the underlying principles."
+        explanation: "JavaScript consistently ranks as the most used programming language on GitHub and Stack Overflow surveys, largely because it's the language of the web browser."
       },
       {
-        question: "What is the origin of 'bikeshedding' in software?",
+        question: "What does 'npm' stand for?",
         options: [
-          "A bicycle shop app",
-          "Spending disproportionate time on trivial issues",
-          "A CSS animation technique",
-          "A code review process"
+          "Node Package Manager",
+          "New Project Manager",
+          "Network Package Manager",
+          "Node Program Manager"
         ],
-        correct: 1,
-        explanation: "From Parkinson's law: a committee spends more time discussing a bike shed than a nuclear reactor."
+        correct: 0,
+        explanation: "npm originally stood for 'Node Package Manager.' Fun fact: it doesn't recursively acronymize — it's just called npm now."
       },
       {
-        question: "What is 'rubber duck debugging'?",
+        question: "How many npm packages exist (approximately)?",
         options: [
-          "Asking a rubber duck for help in Slack",
-          "Explaining your code line-by-line to an inanimate object to find bugs",
-          "A debugging tool for embedded systems",
-          "A rubber-stamp approval process"
+          "100,000",
+          "500,000",
+          "2 million+",
+          "10 million+"
         ],
-        correct: 1,
-        explanation: "Rubber duck debugging is explaining your code aloud to find bugs — the act of articulating often reveals the solution."
+        correct: 2,
+        explanation: "As of 2026, npm has over 2 million packages, making it the largest software registry in the world. The left-pad incident of 2016 showed how many packages depend on tiny utilities."
       }
     ]
   },
@@ -356,63 +331,63 @@ export const quizzes: Quiz[] = [
     date: "2026-07-01",
     category: "TypeScript",
     title: "TypeScript Quiz #1",
-    description: "Type inference, generics, utility types, and the type system.",
-    difficulty: "hard",
+    description: "Type narrowing, generics, utility types, and TypeScript-specific concepts.",
+    difficulty: "medium",
     questions: [
-      {
-        question: "What is the difference between `unknown` and `any` in TypeScript?",
-        options: [
-          "They are identical",
-          "`unknown` is type-safe — you must narrow before using it, `any` disables all checks",
-          "`any` is the safer option",
-          "`unknown` only works with primitives"
-        ],
-        correct: 1,
-        explanation: "`unknown` forces you to perform type checks before using the value. `any` bypasses the type checker entirely, which defeats the purpose of TypeScript."
-      },
-      {
-        question: "What does the `satisfies` operator do in TypeScript 4.9+?",
-        options: [
-          "Asserts a value is truthy",
-          "Validates that an expression matches a type without widening it",
-          "Makes a type optional",
-          "Satisfies a generic constraint"
-        ],
-        correct: 1,
-        explanation: "`satisfies` checks that a value conforms to a type but preserves the narrower inferred type. Unlike a type annotation, it doesn't widen the type."
-      },
-      {
-        question: "What is a conditional type in TypeScript?",
-        options: [
-          "A type that only exists at runtime",
-          "A type expressed as `T extends U ? X : Y` that selects between types",
-          "An optional type parameter",
-          "A type that requires a condition in the constructor"
-        ],
-        correct: 1,
-        explanation: "Conditional types use the pattern `T extends U ? X : Y` to create types that depend on other types."
-      },
-      {
-        question: "What does `Pick<T, K>` do?",
-        options: [
-          "Removes properties K from T",
-          "Creates a new type with only the specified properties K from T",
-          "Makes all properties of T optional",
-          "Picks a random property from T"
-        ],
-        correct: 1,
-        explanation: "`Pick<T, K>` constructs a type by selecting a subset of properties K from type T."
-      },
       {
         question: "What is the difference between `interface` and `type` in TypeScript?",
         options: [
-          "`interface` is faster at runtime",
-          "Interfaces support declaration merging and are generally preferred for object shapes; types are more flexible (unions, intersections, mapped types)",
-          "Types cannot represent objects",
-          "They are completely interchangeable with no differences"
+          "There is no difference",
+          "Interfaces can be extended/merged, types can create unions and intersections",
+          "Types are faster at compile time",
+          "Interfaces only work with classes"
         ],
         correct: 1,
-        explanation: "Interfaces can be merged (declaration merging), extended, and are checked structurally. Types support unions, intersections, mapped types, and more. Both use structural typing."
+        explanation: "Interfaces support declaration merging and can be extended. Types are more flexible — they can create unions, intersections, mapped types, and conditional types."
+      },
+      {
+        question: "What does `Partial<T>` do?",
+        options: [
+          "Makes all properties required",
+          "Makes all properties optional",
+          "Makes all properties readonly",
+          "Makes all properties nullable"
+        ],
+        correct: 1,
+        explanation: "`Partial<T>` is a utility type that makes every property of T optional. Useful for update functions where you only want to pass changed fields."
+      },
+      {
+        question: "What is a type guard?",
+        options: [
+          "A way to protect types from being modified",
+          "A runtime check that narrows a type to a more specific type",
+          "A compile-time only feature",
+          "A way to create private types"
+        ],
+        correct: 1,
+        explanation: "Type guards are runtime expressions that TypeScript uses to narrow types. Examples: `typeof`, `instanceof`, `in`, and custom predicate functions like `isString(x)`."
+      },
+      {
+        question: "What is `infer` used for in TypeScript?",
+        options: [
+          "Declaring variables without types",
+          "Extracting types within conditional types",
+          "Creating type assertions",
+          "Importing external types"
+        ],
+        correct: 1,
+        explanation: "`infer` lets you extract a type within a conditional type. For example: `type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never;`"
+      },
+      {
+        question: "What is the `never` type used for?",
+        options: [
+          "To type null values",
+          "For values that never occur (exhaustive checks, functions that always throw)",
+          "To type any value",
+          "To mark optional parameters"
+        ],
+        correct: 1,
+        explanation: "`never` represents values that never occur. It's used for functions that always throw, exhaustive switch/if checks, and as the bottom type."
       }
     ]
   },
@@ -421,63 +396,63 @@ export const quizzes: Quiz[] = [
     date: "2026-07-02",
     category: "DevOps",
     title: "Docker Quiz #1",
-    description: "Containers, images, volumes, and Dockerfile best practices.",
+    description: "Containers, images, Dockerfiles, volumes, and networking fundamentals.",
     difficulty: "medium",
     questions: [
       {
-        question: "What is the difference between a Docker image and a Docker container?",
+        question: "What is the difference between a Docker image and a container?",
         options: [
           "They are the same thing",
           "An image is a read-only template; a container is a running instance of an image",
           "A container is stored on disk; an image runs in memory",
-          "Images are for production, containers are for development"
+          "An image is for Linux; a container is for Windows"
         ],
         correct: 1,
-        explanation: "A Docker image is a blueprint (like a class). A container is a live, running instance of that image (like an object)."
+        explanation: "An image is an immutable template with the app and dependencies. A container is a runnable instance of an image — you can have multiple containers from one image."
       },
       {
-        question: "What does the `docker build -t myapp .` command do?",
+        question: "What does the `COPY` instruction do in a Dockerfile?",
         options: [
-          "Runs the myapp container",
-          "Builds a Docker image from the Dockerfile in the current directory and tags it 'myapp'",
-          "Downloads the myapp image from Docker Hub",
-          "Creates a new container named myapp"
+          "Downloads files from the internet",
+          "Copies files from the host machine into the image",
+          "Moves files between image layers",
+          "Copies files from one container to another"
         ],
         correct: 1,
-        explanation: "`docker build -t name .` builds an image from the Dockerfile in the current directory and gives it the tag name."
+        explanation: "`COPY` copies files from the build context (your host machine) into the image filesystem. `ADD` is similar but can also handle URLs and tar files."
       },
       {
-        question: "What is a Dockerfile?",
+        question: "What is a Docker volume used for?",
         options: [
-          "A configuration file for Docker Desktop",
-          "A text file with instructions to build a Docker image",
-          "A log file of Docker container activity",
-          "A YAML file for Docker Compose"
+          "Increasing CPU allocation",
+          "Persisting data outside the container's writable layer",
+          "Monitoring container performance",
+          "Creating network connections"
         ],
         correct: 1,
-        explanation: "A Dockerfile contains step-by-step instructions (FROM, RUN, COPY, etc.) that Docker follows to assemble an image."
+        explanation: "Volumes store data persistently. When a container is deleted, data in its writable layer is lost, but volume data persists. Essential for databases."
       },
       {
-        question: "What does `docker volume` do?",
+        question: "What is multi-stage build in Docker?",
         options: [
-          "Increases container memory",
-          "Manages persistent data storage that survives container restarts",
-          "Creates a new network bridge",
-          "Downloads image layers"
+          "Building images for multiple architectures",
+          "Using multiple FROM instructions to optimize image size",
+          "Building containers on multiple servers",
+          "Running multiple processes in one container"
         ],
         correct: 1,
-        explanation: "Volumes provide persistent storage that lives beyond a container's lifecycle. Data in a volume survives restarts, removals, and rebuilds."
+        explanation: "Multi-stage builds use multiple FROM instructions. You can build in one stage and copy only the final artifacts to a slim runtime stage, dramatically reducing image size."
       },
       {
-        question: "What is the purpose of `.dockerignore`?",
+        question: "What does `docker-compose up` do?",
         options: [
-          "It prevents Docker from starting",
-          "It specifies files and directories to exclude from the build context",
-          "It hides containers from `docker ps`",
-          "It ignores errors during build"
+          "Downloads all Docker images",
+          "Builds and starts all services defined in docker-compose.yml",
+          "Pushes images to Docker Hub",
+          "Stops all running containers"
         ],
         correct: 1,
-        explanation: "`.dockerignore` works like `.gitignore` but for Docker builds. Files listed there won't be sent to the Docker daemon, keeping builds faster and images smaller."
+        explanation: "`docker-compose up` builds (if needed) and starts all services from your docker-compose.yml. Add `-d` to run in detached mode."
       }
     ]
   },
@@ -485,178 +460,167 @@ export const quizzes: Quiz[] = [
     id: "linux-quiz-1",
     date: "2026-07-03",
     category: "DevOps",
-    title: "Linux & Shell Quiz #1",
-    description: "Command line basics, file permissions, and shell scripting fundamentals.",
-    difficulty: "easy",
+    title: "Linux Quiz #1",
+    description: "File permissions, processes, shell commands, and Linux fundamentals.",
+    difficulty: "medium",
     questions: [
       {
-        question: "What does `chmod 755 script.sh` do?",
+        question: "What does `chmod 755` do?",
         options: [
-          "Deletes the file",
-          "Gives owner full permissions, group and others read+execute",
-          "Makes the file read-only for everyone",
-          "Changes the file owner to 755"
+          "Delete the file",
+          "Owner: read+write+execute, Group+Others: read+execute",
+          "Make the file read-only for everyone",
+          "Change the file owner to root"
         ],
         correct: 1,
-        explanation: "7 = rwx (owner), 5 = r-x (group), 5 = r-x (others). The numeric values map to read(4) + write(2) + execute(1)."
+        explanation: "7 = rwx (4+2+1), 5 = r-x (4+0+1), 5 = r-x (4+0+1). Owner gets full access; group and others can read and execute but not modify."
       },
       {
-        question: "What is the difference between `>` and `>>` in a shell redirect?",
+        question: "What does the `|` (pipe) operator do in Linux?",
         options: [
-          "No difference",
-          "`>` overwrites the file, `>>` appends to it",
-          "`>` appends, `>>` overwrites",
-          "`>` sends to stdout, `>>` sends to stderr"
+          "Runs two commands simultaneously",
+          "Passes the output of one command as input to the next",
+          "Redirects output to a file",
+          "Creates a symbolic link"
         ],
         correct: 1,
-        explanation: "`>` truncates and overwrites the file. `>>` appends to the end of the file without erasing existing content."
+        explanation: "Pipe takes stdout from the left command and feeds it as stdin to the right command. `ls | grep .txt` lists files then filters for .txt files."
       },
       {
-        question: "What does `grep -r 'error' /var/log` do?",
+        question: "What is the difference between `kill` and `kill -9`?",
         options: [
-          "Deletes all files containing 'error'",
-          "Recursively searches /var/log for files containing 'error'",
-          "Replaces 'error' with nothing in all files",
-          "Counts the number of files in /var/log"
+          "They do the same thing",
+          "kill sends SIGTERM (graceful), kill -9 sends SIGKILL (forced termination)",
+          "kill -9 is faster",
+          "kill only works on root processes"
         ],
         correct: 1,
-        explanation: "`grep` searches for text patterns. `-r` makes it recursive (searches subdirectories). It prints matching lines from files in /var/log."
+        explanation: "`kill` sends SIGTERM, letting the process clean up. `kill -9` sends SIGKILL, which force-terminates immediately. Always try SIGTERM first."
       },
       {
-        question: "What is the purpose of a shebang (`#!/bin/bash`) at the top of a script?",
+        question: "What does `grep` do?",
         options: [
-          "It's a comment that does nothing",
-          "It tells the system which interpreter to use to run the script",
-          "It imports the bash library",
-          "It enables debug mode"
+          "Copies files matching a pattern",
+          "Searches for text patterns in files using regex",
+          "Compresses files",
+          "Lists directory contents"
         ],
         correct: 1,
-        explanation: "The shebang line tells the OS which program should execute the script. Without it, the script might run under the wrong shell."
+        explanation: "grep (Global Regular Expression Print) searches file contents for lines matching a pattern. `grep -r \"TODO\" src/` searches recursively in src/."
       },
       {
-        question: "What does `ps aux | grep nginx` do?",
+        question: "What is `/dev/null`?",
         options: [
-          "Installs nginx",
-          "Lists all running processes and filters for nginx",
-          "Kills all nginx processes",
-          "Checks if nginx config is valid"
+          "A directory for deleted files",
+          "A special file that discards all data written to it (the 'black hole')",
+          "A temporary file storage area",
+          "A device driver for null printers"
         ],
         correct: 1,
-        explanation: "`ps aux` lists all running processes. The pipe `|` sends that output to `grep`, which filters for lines containing 'nginx'."
+        explanation: "`/dev/null` is a special file that discards everything written to it and returns nothing when read. Used to suppress output: `command > /dev/null`."
       }
     ]
   },
   {
     id: "react-quiz-1",
-    date: "2026-06-25",
+    date: "2026-07-04",
     category: "React",
     title: "React Quiz #1",
-    description: "Test your React knowledge — hooks, rendering, state management, and component patterns.",
+    description: "Hooks, state management, rendering, and React component patterns.",
     difficulty: "medium",
     questions: [
       {
-        question: "When should you use `useEffect` with an empty dependency array `[]`?",
+        question: "When does React re-render a component?",
         options: [
-          "To run code after every render",
-          "To run code only once when the component mounts",
-          "To prevent the component from re-rendering",
-          "To clean up global event listeners"
+          "Only when the component's state changes",
+          "When its state changes, props change, or parent re-renders",
+          "Only when props change",
+          "Only when the user interacts with the page"
         ],
         correct: 1,
-        explanation: "An empty dependency array means the effect has no dependencies to watch, so it only runs once after the initial render — similar to componentDidMount."
+        explanation: "React re-renders when: state changes, props change, or the parent component re-renders (unless memoized). Understanding this prevents performance issues."
       },
       {
-        question: "What is the difference between `useState` and `useReducer`?",
+        question: "What does `useEffect` with an empty dependency array `[]` do?",
         options: [
-          "They are completely interchangeable",
-          "`useReducer` is better for complex state logic with multiple sub-values",
-          "`useState` only works with strings",
-          "`useReducer` is faster than `useState`"
+          "Runs on every render",
+          "Runs once on mount, never again",
+          "Never runs",
+          "Runs on mount and when the component unmounts"
         ],
         correct: 1,
-        explanation: "`useReducer` is ideal when state logic is complex, involves multiple sub-values, or when the next state depends on the previous one. It also makes testing easier."
+        explanation: "An empty dependency array means the effect has no dependencies to watch, so it only runs once after the initial render — the 'mount' lifecycle."
       },
       {
-        question: "Why should you not call hooks inside loops, conditions, or nested functions?",
+        question: "What is the purpose of `useCallback`?",
         options: [
-          "It causes memory leaks",
-          "React relies on hook call order to match state between renders",
-          "It's just a style convention with no runtime effect",
-          "Hooks can only be called in the component body"
+          "To memoize a computed value",
+          "To memoize a function to prevent unnecessary re-renders",
+          "To handle async operations",
+          "To create a reference to a DOM element"
         ],
         correct: 1,
-        explanation: "React matches hook calls between renders by their order. If you call hooks conditionally, the order changes and React can't correctly associate state with hooks."
+        explanation: "`useCallback` memoizes a function definition between re-renders. Useful when passing callbacks to child components wrapped in `React.memo`."
       },
       {
-        question: "What does `React.memo` do?",
+        question: "What is React.memo used for?",
         options: [
-          "Caches the component's DOM nodes",
-          "Skips re-rendering the component if its props haven't changed",
-          "Memoizes the component's state",
-          "Prevents the component from unmounting"
+          "Adding comments to React components",
+          "Preventing re-renders when props haven't changed",
+          "Storing component state in memory",
+          "Creating a component cache"
         ],
         correct: 1,
-        explanation: "`React.memo` is a higher-order component that skips re-rendering when the new props are the same as the previous ones. It's a performance optimization."
+        explanation: "`React.memo` is a higher-order component that skips re-rendering if props haven't changed (shallow comparison). It's a performance optimization."
       },
       {
-        question: "What is the correct way to update state based on the previous state?",
+        question: "What is the correct way to update state based on previous state?",
         options: [
           "`setState(state + 1)`",
           "`setState(prev => prev + 1)`",
-          "`this.state.count++`",
-          "`setState({...state, count: state.count + 1})`"
+          "`this.state.count += 1`",
+          "`setState({ count: this.state.count + 1 })`"
         ],
         correct: 1,
-        explanation: "Using the functional update form `setState(prev => prev + 1)` ensures you're working with the most recent state value, which is important for async updates and batching."
+        explanation: "Using the functional form `setState(prev => prev + 1)` ensures you're working with the latest state value, which is important when multiple updates are batched."
       }
     ]
   },
   {
     id: "rest-api-quiz-1",
-    date: "2026-06-25",
-    category: "REST API",
+    date: "2026-07-05",
+    category: "General CS",
     title: "REST API Quiz #1",
-    description: "Test your API knowledge — HTTP methods, status codes, authentication, and design patterns.",
-    difficulty: "easy",
+    description: "HTTP methods, status codes, authentication, and REST API design principles.",
+    difficulty: "medium",
     questions: [
       {
-        question: "Which HTTP method is used to create a new resource?",
-        options: ["GET", "PUT", "POST", "DELETE"],
+        question: "Which HTTP method should be used to update an existing resource?",
+        options: ["GET", "POST", "PUT/PATCH", "DELETE"],
         correct: 2,
-        explanation: "POST is used to create a new resource on the server. GET reads, PUT updates (full replacement), PATCH updates (partial), and DELETE removes."
+        explanation: "PUT replaces the entire resource, PATCH updates specific fields. POST creates new resources, GET retrieves them, DELETE removes them."
       },
       {
-        question: "What does HTTP status code 204 mean?",
+        question: "What does HTTP status code 429 mean?",
         options: [
           "Not Found",
-          "No Content — the request succeeded but there's no response body",
-          "Moved Permanently",
-          "Bad Request"
+          "Unauthorized",
+          "Too Many Requests (rate limited)",
+          "Internal Server Error"
         ],
-        correct: 1,
-        explanation: "204 No Content means the server successfully processed the request but isn't returning any content. Commonly used after DELETE operations."
+        correct: 2,
+        explanation: "429 Too Many Requests means the client has exceeded the rate limit. The response should include a `Retry-After` header."
       },
       {
-        question: "What is the purpose of CORS headers?",
+        question: "What is the difference between authentication and authorization?",
         options: [
-          "To encrypt API responses",
-          "To allow or restrict which origins can access your API from a browser",
-          "To compress API responses",
-          "To authenticate API requests"
-        ],
-        correct: 1,
-        explanation: "CORS (Cross-Origin Resource Sharing) headers tell browsers which origins are allowed to make requests to your API. They prevent unauthorized cross-origin access."
-      },
-      {
-        question: "What's the difference between authentication and authorization?",
-        options: [
-          "They mean the same thing",
-          "Authentication verifies identity; authorization determines access level",
+          "They are the same thing",
+          "Authentication verifies identity; authorization determines access permissions",
           "Authentication is for APIs; authorization is for databases",
-          "Authorization happens first, then authentication"
+          "Authentication is server-side; authorization is client-side"
         ],
         correct: 1,
-        explanation: "Authentication answers 'Who are you?' (login, tokens). Authorization answers 'What can you do?' (roles, permissions). You authenticate first, then authorize."
+        explanation: "Authentication answers 'Who are you?' (login). Authorization answers 'What can you do?' (permissions). You authenticate first, then are authorized for specific actions."
       },
       {
         question: "What should a well-designed REST API return when a resource isn't found?",
@@ -667,13 +631,24 @@ export const quizzes: Quiz[] = [
           "302 Redirect to the homepage"
         ],
         correct: 1,
-        explanation: "404 Not Found is the correct status code. Returning 200 with an empty body confuses clients and makes debugging harder. A descriptive error message helps developers fix issues."
+        explanation: "404 Not Found is the correct status code. Returning 200 with an empty body confuses clients and makes debugging harder."
+      },
+      {
+        question: "What is idempotency in REST APIs?",
+        options: [
+          "The ability to cache responses",
+          "Making the same request multiple times produces the same result",
+          "Compressing response bodies",
+          "Using HTTPS for all requests"
+        ],
+        correct: 1,
+        explanation: "An idempotent operation produces the same result whether called once or many times. GET, PUT, DELETE are idempotent; POST is not."
       }
     ]
   },
   {
     id: "security-quiz-1",
-    date: "2026-07-04",
+    date: "2026-07-06",
     category: "Developer Culture",
     title: "Web Security Quiz #1",
     description: "XSS, CSRF, SQL injection, and other security fundamentals every developer should know.",
@@ -733,6 +708,71 @@ export const quizzes: Quiz[] = [
         ],
         correct: 0,
         explanation: "CORS (Cross-Origin Resource Sharing) is a browser mechanism that controls which origins can access resources. It's a security feature that prevents unauthorized cross-origin requests."
+      }
+    ]
+  },
+  {
+    id: "kubernetes-quiz-1",
+    date: "2026-07-07",
+    category: "DevOps",
+    title: "Kubernetes Quiz #1",
+    description: "Pods, services, deployments, and cluster management fundamentals.",
+    difficulty: "hard",
+    questions: [
+      {
+        question: "What is the smallest deployable unit in Kubernetes?",
+        options: [
+          "A node",
+          "A container",
+          "A pod",
+          "A deployment"
+        ],
+        correct: 2,
+        explanation: "A Pod is the smallest deployable unit. It groups one or more containers that share networking and storage. A pod wraps a single container in most cases, but can run sidecar containers too."
+      },
+      {
+        question: "What does a Kubernetes Service provide?",
+        options: [
+          "Storage for pods",
+          "A stable network endpoint for a set of pods",
+          "CPU and memory limits",
+          "Logging and monitoring"
+        ],
+        correct: 1,
+        explanation: "A Service provides a stable IP address and DNS name for a set of pods. It load-balances traffic across pods and handles pod restarts and rescheduling."
+      },
+      {
+        question: "What is the difference between a Deployment and a StatefulSet?",
+        options: [
+          "They are the same thing",
+          "Deployments are for stateless apps; StatefulSets are for stateful apps requiring stable identity",
+          "Deployments are faster than StatefulSets",
+          "StatefulSets can only run one replica"
+        ],
+        correct: 1,
+        explanation: "Deployments manage stateless apps with interchangeable pods. StatefulSets give each pod a unique, stable identity — essential for databases and message queues."
+      },
+      {
+        question: "What is a ConfigMap in Kubernetes?",
+        options: [
+          "A map of all cluster nodes",
+          "An object to store non-confidential configuration data as key-value pairs",
+          "A network configuration file",
+          "A monitoring dashboard"
+        ],
+        correct: 1,
+        explanation: "ConfigMaps store configuration data (not secrets). They can be mounted as files or environment variables in pods, separating config from container images."
+      },
+      {
+        question: "What command shows all pods across all namespaces?",
+        options: [
+          "`kubectl get pods`",
+          "`kubectl get pods --all-namespaces`",
+          "`kubectl describe pods`",
+          "`kubectl list pods`"
+        ],
+        correct: 1,
+        explanation: "`kubectl get pods` only shows pods in the current namespace. Add `--all-namespaces` to see pods across all namespaces in the cluster."
       }
     ]
   }
