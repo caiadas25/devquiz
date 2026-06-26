@@ -6,8 +6,10 @@ import { sqlQuiz } from "./quiz-sql-1";
 import { rustQuiz } from "./quiz-rust-1";
 import { typescriptQuiz } from "./quiz-typescript-1";
 import { cssQuiz } from "./quiz-css-1";
+import { kotlinQuiz } from "./quiz-kotlin-1";
 
 export const quizzes: Quiz[] = [
+  kotlinQuiz,
   awsQuiz,
   dockerQuiz,
   githubActionsQuiz,
