@@ -909,5 +909,55 @@ export const quizzes: Quiz[] = [
         explanation: "If neither `next()` is called nor a response is sent, the request will hang until the client times out. Express doesn't have automatic timeouts — this is a common cause of production hangs."
       }
     ]
+  },
+  {
+    id: "python-quiz-2",
+    date: "2026-06-27",
+    category: "Python",
+    title: "Python Quiz #2 — Data Structures & Comprehensions",
+    description: "Lists, dictionaries, sets, generators, and Pythonic idioms.",
+    difficulty: "medium",
+    questions: [
+      {
+        question: "What is the output of: `[x**2 for x in range(5) if x % 2 == 0]`?",
+        options: ["[0, 4, 16]", "[0, 1, 4, 9, 16]", "[0, 2, 4]", "[1, 4, 9, 16]"],
+        correct: 0,
+        explanation: "The list comprehension filters for even numbers (0, 2, 4) and squares them: 0²=0, 2²=4, 4²=16."
+      },
+      {
+        question: "What is the difference between a list and a tuple in Python?",
+        options: [
+          "Lists are faster than tuples",
+          "Tuples are mutable; lists are not",
+          "Lists are mutable; tuples are immutable",
+          "There is no difference"
+        ],
+        correct: 2,
+        explanation: "Lists use [] and are mutable (can be modified after creation). Tuples use () and are immutable (cannot be changed). Tuples are slightly faster and can be used as dictionary keys."
+      },
+      {
+        question: "What does `dict.fromkeys(['a', 'b', 'c'], 0)` return?",
+        options: ["{'a': 'b': 'c': 0}", "{'a': 0, 'b': 0, 'c': 0}", "[('a', 0), ('b', 0), ('c', 0)]", "Error: fromkeys is not a dict method"],
+        correct: 1,
+        explanation: "`dict.fromkeys()` creates a new dictionary with all keys set to the same value. This is faster than a loop for initializing dictionaries with default values."
+      },
+      {
+        question: "What is a generator in Python?",
+        options: [
+          "A function that creates random numbers",
+          "A function that uses `yield` to produce values lazily one at a time",
+          "A class that implements the __iter__ protocol",
+          "A built-in module for generating UUIDs"
+        ],
+        correct: 1,
+        explanation: "Generators use `yield` instead of `return` to produce values lazily. They don't store all values in memory — values are generated on-the-fly as you iterate, making them memory-efficient for large datasets."
+      },
+      {
+        question: "What is the output of: `len(set([1, 2, 2, 3, 3, 3]))`?",
+        options: ["6", "5", "3", "4"],
+        correct: 2,
+        explanation: "Sets automatically remove duplicates. The list [1, 2, 2, 3, 3, 3] becomes {1, 2, 3} in the set, which has length 3."
+      }
+    ]
   }
 ];
