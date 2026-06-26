@@ -4,7 +4,7 @@ import { dockerQuiz } from "./quiz-docker-1";
 import { githubActionsQuiz } from "./quiz-github-actions-1";
 import { sqlQuiz } from "./quiz-sql-1";
 import { rustQuiz } from "./quiz-rust-1";
-*** quizzes array @@
+
 export const quizzes: Quiz[] = [
   awsQuiz,
   dockerQuiz,
