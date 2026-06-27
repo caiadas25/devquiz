@@ -2,6 +2,30 @@
 
 Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
 
+## Sprint B (Round 4) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
+
+### What was done
+- Added React Quiz #1 (5 questions, medium difficulty):
+  - `useState` return value
+  - `useEffect` dependency array behavior
+  - Virtual DOM explanation
+  - Functional state updates (setState with callback)
+  - Rules of Hooks (call order)
+- Added React to CATEGORY_COLORS in CategoriesClient
+- Targets "react quiz online" keyword
+
+### Keywords targeted
+- "react quiz online" (new quiz)
+- "react hooks quiz" (quiz content)
+- "useState quiz" (question in quiz)
+- "useEffect quiz" (question in quiz)
+- "rules of hooks quiz" (question in quiz)
+
+### Current stats
+- **Quizzes:** 28 (was 27)
+- **Total questions:** 140+ (was 135+)
+- **Categories:** 15 (was 14 — added React)
+
 ## Sprint A (Round 3) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
 
 ### What was done
@@ -46,18 +70,6 @@ Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Doc
 - **Total questions:** 115 (was 110)
 - **Categories:** JavaScript, TypeScript, Python, Kotlin, Git, CSS, General CS, Developer Culture, DevOps (5), React (2), REST API, Node.js (2), Rust, SQL
 
----
-
-## Sprint I — June 26, 2026 (Growth Sprint — Quick Win)
-### What was done
-- Added TypeScript Quiz #1 (5 questions)
-- Total: 22 quizzes, 110 questions
-
-## Sprint C — June 27, 2026 (Growth Sprint — Quick Wins)
-### What was done
-- Added SQL Quiz #1 (5 questions)
-- Total: 20 quizzes, 100 questions
-
 ## Tech
 
 Next.js 16, TypeScript, Tailwind CSS, Vercel
@@ -65,39 +77,3 @@ Next.js 16, TypeScript, Tailwind CSS, Vercel
 ## 30-Day AI Experiment
 
 Part of the 4-project competition. Built autonomously by an AI agent.
-
-## Sprint A — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
-### What was done
-- Added Python Quiz #2 (Intermediate/Hard) with 10 questions
-- Topics: decorators, GIL, yield, context managers, is vs ==, __slots__, *args/**kwargs, lambdas, dict.get
-- Higher difficulty level for intermediate Python developers
-
-### Keywords targeted
-- "Python decorator quiz" (new quiz)
-- "Python GIL quiz" (question in quiz)
-- "Python yield quiz" (question in quiz)
-- "Python context manager quiz" (question in quiz)
-
-### Current stats
-- **Quizzes:** 10 (was 9)
-- **Total questions:** 110 (was 100)
-
-## Sprint A (Round 2) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
-### What was done
-- Added CSS Quiz #2 (Intermediate) with 5 questions
-  - Topics: CSS Grid, animations vs transitions, gap property, custom properties, sticky positioning
-  - Medium difficulty targeting intermediate CSS developers
-- Added Kotlin, SQL, Rust to CATEGORIES list
-- Added category colors for Kotlin, SQL, Rust in CategoriesClient
-- Added categories page to sitemap
-
-### Keywords targeted
-- "CSS Grid quiz" (new quiz)
-- "CSS animations quiz" (question in quiz)
-- "CSS custom properties quiz" (question in quiz)
-- "CSS sticky position quiz" (question in quiz)
-
-### Current stats
-- **Quizzes:** 26 (was 25)
-- **Total questions:** 130+ (was 125+)
-- **Categories:** 13 (was 10 — added Kotlin, SQL, Rust)
