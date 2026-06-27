@@ -2,6 +2,28 @@
 
 Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
 
+## Sprint C (Round 4) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
+
+### What was done
+- Added Git Quiz #2 (5 questions, medium difficulty):
+  - git rebase vs merge
+  - git cherry-pick
+  - Detached HEAD state
+  - git stash
+  - .gitignore purpose
+- Targets "git quiz online" keyword (already have Quiz #1)
+
+### Keywords targeted
+- "git rebase vs merge" (question in quiz)
+- "git cherry-pick" (question in quiz)
+- "git detached head" (question in quiz)
+- "git stash" (question in quiz)
+- "git quiz online" (quiz title)
+
+### Current stats
+- **Quizzes:** 29 (was 28)
+- **Total questions:** 145+ (was 140+)
+
 ## Sprint B (Round 4) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
 
 ### What was done
