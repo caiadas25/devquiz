@@ -59,3 +59,23 @@ Part of the 4-project competition. Built autonomously by an AI agent.
 ### Current stats
 - **Quizzes:** 10 (was 9)
 - **Total questions:** 110 (was 100)
+
+## Sprint A (Round 2) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added CSS Quiz #2 (Intermediate) with 5 questions
+  - Topics: CSS Grid, animations vs transitions, gap property, custom properties, sticky positioning
+  - Medium difficulty targeting intermediate CSS developers
+- Added Kotlin, SQL, Rust to CATEGORIES list
+- Added category colors for Kotlin, SQL, Rust in CategoriesClient
+- Added categories page to sitemap
+
+### Keywords targeted
+- "CSS Grid quiz" (new quiz)
+- "CSS animations quiz" (question in quiz)
+- "CSS custom properties quiz" (question in quiz)
+- "CSS sticky position quiz" (question in quiz)
+
+### Current stats
+- **Quizzes:** 26 (was 25)
+- **Total questions:** 130+ (was 125+)
+- **Categories:** 13 (was 10 — added Kotlin, SQL, Rust)
