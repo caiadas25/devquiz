@@ -7,9 +7,11 @@ import { rustQuiz } from "./quiz-rust-1";
 import { typescriptQuiz } from "./quiz-typescript-1";
 import { cssQuiz } from "./quiz-css-1";
 import { kotlinQuiz } from "./quiz-kotlin-1";
+import { pythonQuiz2 } from "./quiz-python-2";
 
 export const quizzes: Quiz[] = [
   kotlinQuiz,
+  pythonQuiz2,
   awsQuiz,
   dockerQuiz,
   githubActionsQuiz,
