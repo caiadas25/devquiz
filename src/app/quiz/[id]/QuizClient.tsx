@@ -2,22 +2,28 @@
 
 import { quizzes } from "@/data/quizzes";
 import { useParams } from "next/navigation";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const TIMER_SECONDS = 15;
 
-function Confetti() {
-  const pieces = Array.from({ length: 30 }, (_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    delay: Math.random() * 0.5,
-    color: ["#8b5cf6", "#ec4899", "#06b6d4", "#22c55e", "#f59e0b"][i % 5],
-  }));
+// Deterministic pseudo-random seeded by index (no Math.random during render)
+function pseudoRandom(seed: number): number {
+  const x = Math.sin(seed * 12.9898 + seed * 78.233) * 43758.5453;
+  return x - Math.floor(x);
+}
 
+const CONFETTI_PIECES = Array.from({ length: 30 }, (_, i) => ({
+  id: i,
+  left: pseudoRandom(i) * 100,
+  delay: pseudoRandom(i + 100) * 0.5,
+  color: ["#8b5cf6", "#ec4899", "#06b6d4", "#22c55e", "#f59e0b"][i % 5],
+}));
+
+function Confetti() {
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
-      {pieces.map((p) => (
+      {CONFETTI_PIECES.map((p) => (
         <div
           key={p.id}
           className="confetti-piece absolute w-3 h-3 rounded-sm"
@@ -51,17 +57,25 @@ export default function QuizClient() {
   const [finished, setFinished] = useState(false);
   const [timer, setTimer] = useState(TIMER_SECONDS);
 
-  const handleTimeout = useCallback(() => {
-    setAnswered(true);
-    setAnswers((prev) => [...prev.slice(0, currentQ), null]);
-  }, [currentQ]);
-
+  // Timer effect: uses setInterval so setState is in an async callback, not synchronous in the effect
   useEffect(() => {
     if (!quiz || answered || finished) return;
-    if (timer <= 0) { handleTimeout(); return; }
-    const t = setTimeout(() => setTimer(timer - 1), 1000);
-    return () => clearTimeout(t);
-  }, [timer, answered, finished, quiz, handleTimeout]);
+
+    const intervalId = setInterval(() => {
+      setTimer((prev) => {
+        if (prev <= 1) {
+          clearInterval(intervalId);
+          // Timeout: mark as answered with null (no selection)
+          setAnswered(true);
+          setAnswers((a) => [...a, null]);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [answered, finished, quiz]);
 
   if (!quiz) {
     return (

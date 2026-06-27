@@ -2,7 +2,14 @@
 
 import { quizzes } from "@/data/quizzes";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+function getResultsSnapshot(): string {
+  try { return localStorage.getItem("devquiz-results") || "{}"; } catch { return "{}"; }
+}
+function getStatsSnapshot(): string {
+  try { return localStorage.getItem("devquiz-stats") || "{}"; } catch { return "{}"; }
+}
 
 const CATEGORY_COLORS: Record<string, string> = {
   JavaScript: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
@@ -20,6 +27,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   SQL: "bg-teal-500/20 text-teal-300 border-teal-500/30",
   Rust: "bg-red-500/20 text-red-300 border-red-500/30",
   PHP: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+  Java: "bg-orange-500/20 text-orange-300 border-orange-500/30",
 };
 
 const DIFFICULTY_STYLES: Record<string, string> = {
@@ -29,16 +37,10 @@ const DIFFICULTY_STYLES: Record<string, string> = {
 };
 
 export default function Home() {
-  const [results, setResults] = useState<Record<string, { score: number }>>({});
-  const [streak, setStreak] = useState(0);
-
-  useEffect(() => {
-    try {
-      setResults(JSON.parse(localStorage.getItem("devquiz-results") || "{}"));
-      const stats = JSON.parse(localStorage.getItem("devquiz-stats") || "{}");
-      setStreak(stats.streak || 0);
-    } catch {}
-  }, []);
+  const rawResults = useSyncExternalStore(() => () => {}, getResultsSnapshot, () => "{}");
+  const rawStats = useSyncExternalStore(() => () => {}, getStatsSnapshot, () => "{}");
+  const results: Record<string, { score: number }> = (() => { try { return JSON.parse(rawResults); } catch { return {}; } })();
+  const streak: number = (() => { try { return JSON.parse(rawStats).streak || 0; } catch { return 0; } })();
 
   const latest = quizzes[0];
 

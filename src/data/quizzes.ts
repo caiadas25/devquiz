@@ -13,6 +13,7 @@ import { nodeQuiz } from "./quiz-node-1";
 import { reactQuiz } from "./quiz-react-1";
 import { gitQuiz2 } from "./quiz-git-2";
 import { phpQuiz } from "./quiz-php-1";
+import { javaQuiz } from "./quiz-java-1";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -29,6 +30,7 @@ export const quizzes: Quiz[] = [
   cssQuiz,
   cssQuiz2,
   phpQuiz,
+  javaQuiz,
   {
     id: "js-quiz-1",
     date: "2026-06-25",

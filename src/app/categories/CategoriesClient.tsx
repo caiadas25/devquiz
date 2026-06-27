@@ -3,7 +3,14 @@
 import { quizzes } from "@/data/quizzes";
 import { CATEGORIES } from "@/types/quiz";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSyncExternalStore } from "react";
+
+function getResultsSnapshot(): string {
+  try {
+    return localStorage.getItem("devquiz-results") || "{}";
+  } catch { return "{}"; }
+}
 
 const CATEGORY_COLORS: Record<string, string> = {
   JavaScript: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
@@ -19,6 +26,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "General CS": "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
   "Developer Culture": "bg-violet-500/20 text-violet-300 border-violet-500/30",
   PHP: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+  Java: "bg-orange-500/20 text-orange-300 border-orange-500/30",
 };
 
 const DIFFICULTY_STYLES: Record<string, string> = {
@@ -28,14 +36,9 @@ const DIFFICULTY_STYLES: Record<string, string> = {
 };
 
 export default function CategoriesClient() {
-  const [results, setResults] = useState<Record<string, { score: number }>>({});
   const [selected, setSelected] = useState<string | null>(null);
-
-  useEffect(() => {
-    try {
-      setResults(JSON.parse(localStorage.getItem("devquiz-results") || "{}"));
-    } catch {}
-  }, []);
+  const rawResults = useSyncExternalStore(() => () => {}, getResultsSnapshot, () => "{}");
+  const results: Record<string, { score: number }> = (() => { try { return JSON.parse(rawResults); } catch { return {}; } })();
 
   const categories = CATEGORIES.filter((cat) =>
     quizzes.some((q) => q.category === cat)

@@ -1,7 +1,31 @@
 # DevQuiz — Daily Developer Trivia
 
-Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, PHP, and developer culture.
+Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, PHP, Java, and developer culture.
+## Sprint A (Round 6) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Java Quiz #1 (5 questions, medium difficulty):
+  - `ArrayIndexOutOfBoundsException` — array access error
+  - `Optional.ofNullable(null)` — Optional behavior
+  - `==` vs `.equals()` — object comparison
+  - `List.of()` — immutable list in Java 11+
+  - `stream.collect(Collectors.toList())` — stream to list conversion
+- Added Java to CATEGORIES type and category colors
+- Added Java color to homepage CATEGORY_COLORS
 
+### Keywords targeted
+- "java quiz online" (new quiz)
+- "java array index out of bounds" (question in quiz)
+- "java Optional null" (question in quiz)
+- "java == vs .equals()" (question in quiz)
+- "java List.of immutable" (question in quiz)
+- "java stream collect to list" (question in quiz)
+
+### Current stats
+- **Quizzes:** 31 (was 30)
+- **Total questions:** 155+ (was 150+)
+- **Categories:** 16 (was 15 — added Java)
+
+## Sprint A (Round 5) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
 ## Sprint A (Round 5) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
 
 ### What was done
@@ -114,6 +138,49 @@ Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Doc
 - **Quizzes:** 23 (was 22)
 - **Total questions:** 115 (was 110)
 - **Categories:** JavaScript, TypeScript, Python, Kotlin, Git, CSS, General CS, Developer Culture, DevOps (5), React (2), REST API, Node.js (2), Rust, SQL
+
+## Strategic Review — June 27, 2026
+
+### Traffic data
+- Vercel Analytics is integrated (`@vercel/analytics` + `SpeedInsights`).
+- Runtime logs in the 24h window show minimal server-side hits — expected since the site is SSG/prerendered. Actual visitor data is only available through the Vercel Analytics dashboard (not exposed via API).
+- **No traffic baseline exists yet.** This is the data gap: we're building content without visibility into actual visitors.
+- One self-fetch logged (the automated review probe). No organic traffic detected in runtime logs.
+- Zero runtime errors. Site is healthy.
+
+### What's working
+- **Content velocity is strong.** 30 quizzes, 150+ questions, 15 categories in ~3 days. The build pipeline is fast.
+- **OG meta tags** are present on every page — titles, descriptions, twitter:card are set.
+- **Share button exists** on quiz completion (Twitter intent with score text).
+- **Streak tracking** via localStorage creates a daily engagement hook.
+- All deployments succeed. Build pipeline is reliable.
+
+### What's NOT working / critical gaps
+1. **No og:image.** Social shares show a generic Vercel card. This is the single biggest shareability blocker — visual score cards drive clicks.
+2. **Share URL is missing from the tweet.** The share text is `I scored 3/5 on React Quiz #1! 🔥 Can you beat me?` but includes no link back to DevQuiz. Nobody can click through.
+3. **Twitter only.** No LinkedIn, no Reddit, no "copy score" button. Developer audience lives on all three.
+4. **No daily engagement loop on the homepage.** Returning visitors see the same static layout — no streak display, no "welcome back", no countdown to tomorrow's quiz.
+5. **The "30-day experiment" footer tagline** is underexploited — it's a narrative hook for Hacker News / Reddit but never mentioned in share text or social prompts.
+
+### 3 Recommended Actions for Today's Growth Sprints
+
+**Sprint 1 — Fix the share flow (highest ROI, ~30 min)**
+- Add the DevQuiz URL to the tweet share text: append `https://devquiz.vercel.app/quiz/{id}` to the shareText string in `QuizClient.tsx`.
+- Add a "Copy Score" button alongside the Share button (clipboard API) for pasting into Slack/Discord.
+- Add a LinkedIn share link (`https://www.linkedin.com/sharing/share-offsite/?url=...`).
+- Add share buttons to the quiz start page (pre-completion) so users can challenge friends before playing.
+
+**Sprint 2 — Dynamic OG image for score cards (~1 hour)**
+- Use Next.js OG Image Generation (`/api/og`) or Vercel's `@vercel/og` to generate a visual score card on the fly.
+- Route: `app/api/og/quiz/[id]/route.tsx` — renders a card with quiz title, score, category badge, and DevQuiz branding.
+- Update the share link to use this OG image URL so social previews show a real score card.
+- This single change makes every share visually compelling on Twitter, LinkedIn, Discord embeds.
+
+**Sprint 3 — Homepage daily engagement loop (~45 min)**
+- Show a "Welcome back" message with current streak when localStorage has data.
+- Display "Next quiz drops in X hours" countdown (calculated from midnight UTC).
+- Add a prominent "Today's Challenge" CTA with the quiz difficulty badge visible before clicking.
+- This converts one-time visitors into daily returners.
 
 ## Tech
 

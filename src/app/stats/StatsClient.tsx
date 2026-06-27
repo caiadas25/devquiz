@@ -1,6 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useSyncExternalStore } from "react";
+
+function getStatsSnapshot(): string {
+  try { return localStorage.getItem("devquiz-stats") || "{}"; } catch { return "{}"; }
+}
 
 interface Stats {
   streak: number;
@@ -12,16 +17,7 @@ interface Stats {
   totalQuestionsAnswered: number;
 }
 
-function getStats(): Stats {
-  if (typeof window === "undefined") {
-    return { streak: 0, totalQuizzesTaken: 0, averageScore: 0, bestScore: 0, lastQuizDate: null, totalCorrectAnswers: 0, totalQuestionsAnswered: 0 };
-  }
-  try {
-    return JSON.parse(localStorage.getItem("devquiz-stats") || "{}");
-  } catch {
-    return { streak: 0, totalQuizzesTaken: 0, averageScore: 0, bestScore: 0, lastQuizDate: null, totalCorrectAnswers: 0, totalQuestionsAnswered: 0 };
-  }
-}
+const DEFAULT_STATS: Stats = { streak: 0, totalQuizzesTaken: 0, averageScore: 0, bestScore: 0, lastQuizDate: null, totalCorrectAnswers: 0, totalQuestionsAnswered: 0 };
 
 function StatCard({ label, value, sub }: { label: string; value: string | number; sub?: string }) {
   return (
@@ -34,15 +30,20 @@ function StatCard({ label, value, sub }: { label: string; value: string | number
 }
 
 export default function StatsClient() {
-  const [stats, setStats] = useState<Stats | null>(null);
-  useEffect(() => { setStats(getStats()); }, []);
-
-  if (!stats) return <div className="text-center py-20 text-gray-500">Loading stats...</div>;
+  const rawStats = useSyncExternalStore(() => () => {}, getStatsSnapshot, () => "{}");
+  const stats: Stats = (() => {
+    try {
+      const parsed = JSON.parse(rawStats);
+      return { ...DEFAULT_STATS, ...parsed };
+    } catch {
+      return DEFAULT_STATS;
+    }
+  })();
 
   if (stats.totalQuizzesTaken === 0) {
     return (
       <div className="text-center py-20 text-gray-500">
-        No quizzes taken yet. <a href="/" className="text-violet-400 hover:underline">Take your first quiz</a>!
+        No quizzes taken yet. <Link href="/" className="text-violet-400 hover:underline">Take your first quiz</Link>!
       </div>
     );
   }
