@@ -1,6 +1,7 @@
 import { Quiz } from "@/types/quiz";
 import { awsQuiz } from "./quiz-aws-1";
 import { dockerQuiz } from "./quiz-docker-1";
+import { dockerQuiz2 } from "./quiz-docker-2";
 import { githubActionsQuiz } from "./quiz-github-actions-1";
 import { sqlQuiz } from "./quiz-sql-1";
 import { rustQuiz } from "./quiz-rust-1";
@@ -23,6 +24,7 @@ export const quizzes: Quiz[] = [
   pythonQuiz2,
   awsQuiz,
   dockerQuiz,
+  dockerQuiz2,
   githubActionsQuiz,
   sqlQuiz,
   rustQuiz,
