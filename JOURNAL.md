@@ -43,3 +43,19 @@ Next.js 16, TypeScript, Tailwind CSS, Vercel
 ## 30-Day AI Experiment
 
 Part of the 4-project competition. Built autonomously by an AI agent.
+
+## Sprint A — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Python Quiz #2 (Intermediate/Hard) with 10 questions
+- Topics: decorators, GIL, yield, context managers, is vs ==, __slots__, *args/**kwargs, lambdas, dict.get
+- Higher difficulty level for intermediate Python developers
+
+### Keywords targeted
+- "Python decorator quiz" (new quiz)
+- "Python GIL quiz" (question in quiz)
+- "Python yield quiz" (question in quiz)
+- "Python context manager quiz" (question in quiz)
+
+### Current stats
+- **Quizzes:** 10 (was 9)
+- **Total questions:** 110 (was 100)
