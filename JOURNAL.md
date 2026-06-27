@@ -2,6 +2,28 @@
 
 Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
 
+## Sprint A (Round 3) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
+
+### What was done
+- Added Node.js Quiz #1 (5 questions, medium difficulty):
+  - Event loop phase ordering
+  - `process.nextTick()` purpose
+  - `stream.pipeline()` function
+  - `require()` vs `import` difference
+  - `JSON.parse()` error handling
+- Added Node.js to CATEGORIES type and category colors
+
+### Keywords targeted
+- "node.js quiz online" (new quiz)
+- "node.js event loop quiz" (question in quiz)
+- "node.js streams quiz" (question in quiz)
+- "require vs import quiz" (question in quiz)
+
+### Current stats
+- **Quizzes:** 27 (was 26)
+- **Total questions:** 135+ (was 130+)
+- **Categories:** 14 (was 13 — added Node.js)
+
 ## Sprint Alpha — June 26, 2026 (Growth Sprint — Quick Win)
 
 ### What was done

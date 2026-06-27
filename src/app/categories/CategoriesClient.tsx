@@ -14,6 +14,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Kotlin: "bg-purple-500/20 text-purple-300 border-purple-500/30",
   SQL: "bg-teal-500/20 text-teal-300 border-teal-500/30",
   Rust: "bg-red-500/20 text-red-300 border-red-500/30",
+  "Node.js": "bg-lime-500/20 text-lime-300 border-lime-500/30",
   "General CS": "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
   "Developer Culture": "bg-violet-500/20 text-violet-300 border-violet-500/30",
 };
