@@ -6,6 +6,7 @@ import { sqlQuiz } from "./quiz-sql-1";
 import { rustQuiz } from "./quiz-rust-1";
 import { typescriptQuiz } from "./quiz-typescript-1";
 import { cssQuiz } from "./quiz-css-1";
+import { cssQuiz2 } from "./quiz-css-2";
 import { kotlinQuiz } from "./quiz-kotlin-1";
 import { pythonQuiz2 } from "./quiz-python-2";
 
@@ -19,6 +20,7 @@ export const quizzes: Quiz[] = [
   rustQuiz,
   typescriptQuiz,
   cssQuiz,
+  cssQuiz2,
   {
     id: "js-quiz-1",
     date: "2026-06-25",

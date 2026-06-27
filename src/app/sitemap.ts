@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: base, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
     { url: `${base}/stats`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.5 },
+    { url: `${base}/categories`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
     ...quizzes.map((q) => ({
       url: `${base}/quiz/${q.id}`,
       lastModified: new Date(q.date),
