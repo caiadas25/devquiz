@@ -11,10 +11,12 @@ import { kotlinQuiz } from "./quiz-kotlin-1";
 import { pythonQuiz2 } from "./quiz-python-2";
 import { nodeQuiz } from "./quiz-node-1";
 import { reactQuiz } from "./quiz-react-1";
+import { gitQuiz2 } from "./quiz-git-2";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
   reactQuiz,
+  gitQuiz2,
   kotlinQuiz,
   pythonQuiz2,
   awsQuiz,
