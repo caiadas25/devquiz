@@ -1,6 +1,29 @@
 # DevQuiz — Daily Developer Trivia
 
-Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, and developer culture.
+Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, PHP, and developer culture.
+
+## Sprint A (Round 5) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
+
+### What was done
+- Added PHP Quiz #1 (5 questions, medium difficulty):
+  - `===` strict equality vs `==`
+  - Null coalescing operator `??`
+  - `count()` behavior
+  - `match` expression (PHP 8+)
+  - PHP type coercion edge cases
+- Added PHP to CATEGORIES type and category colors
+- Added SQL, Rust, PHP colors to homepage CATEGORY_COLORS (was missing)
+
+### Keywords targeted
+- "php quiz online" (new quiz)
+- "php strict equality quiz" (question in quiz)
+- "php null coalescing operator" (question in quiz)
+- "php match expression" (question in quiz)
+
+### Current stats
+- **Quizzes:** 30 (was 29)
+- **Total questions:** 150+ (was 145+)
+- **Categories:** 15 (was 15 — added PHP)
 
 ## Sprint C (Round 4) — June 27, 2026 (Growth Sprint — DevQuiz Quick Wins)
 

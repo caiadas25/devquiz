@@ -18,6 +18,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "React": "bg-sky-500/20 text-sky-300 border-sky-500/30",
   "General CS": "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
   "Developer Culture": "bg-violet-500/20 text-violet-300 border-violet-500/30",
+  PHP: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
 };
 
 const DIFFICULTY_STYLES: Record<string, string> = {
