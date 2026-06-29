@@ -1,3 +1,26 @@
+## Sprint A (Round 12) — June 29, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Rust Quiz #2 (5 questions, hard difficulty):
+  - Error handling with ? operator
+  - impl Trait vs dyn Trait (static vs dynamic dispatch)
+  - Exhaustive pattern matching with match
+  - From trait for type conversions
+  - &str vs String ownership
+- Targets "rust quiz online" keyword
+
+### Keywords targeted
+- "rust quiz online" (new quiz — high volume)
+- "rust ownership quiz" (quiz content)
+- "rust trait quiz" (quiz content)
+- "rust pattern matching quiz" (quiz content)
+
+### Current stats
+- **Quizzes:** 36 (was 35)
+- **Total questions:** 186+ (was 181+)
+- **Categories:** 17 (unchanged)
+
+---
+
 ## Sprint A (Round 11) — June 29, 2026 (Growth Sprint — DevQuiz Quick Wins)
 ### What was done
 - Added Python Quiz #3 (8 questions, hard difficulty):
