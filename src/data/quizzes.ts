@@ -18,6 +18,7 @@ import { javaQuiz } from "./quiz-java-1";
 import { sqlQuiz2 } from "./quiz-sql-2";
 import { goQuiz } from "./quiz-go-1";
 import { pythonQuiz3 } from "./quiz-python-3";
+import { rustQuiz2 } from "./quiz-rust-2";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -994,4 +995,5 @@ export const quizzes: Quiz[] = [
   },
   goQuiz,
   pythonQuiz3,
+  rustQuiz2,
 ];
