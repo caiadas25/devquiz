@@ -16,6 +16,7 @@ import { gitQuiz2 } from "./quiz-git-2";
 import { phpQuiz } from "./quiz-php-1";
 import { javaQuiz } from "./quiz-java-1";
 import { sqlQuiz2 } from "./quiz-sql-2";
+import { goQuiz } from "./quiz-go-1";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -989,5 +990,6 @@ export const quizzes: Quiz[] = [
         explanation: "Sets automatically remove duplicates. The list [1, 2, 2, 3, 3, 3] becomes {1, 2, 3} in the set, which has length 3."
       }
     ]
-  }
+  },
+  goQuiz,
 ];

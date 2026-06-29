@@ -1,3 +1,31 @@
+## Sprint A (Round 10) — June 29, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Go Quiz #1 (8 questions, medium difficulty):
+  - Nil interface zero value
+  - Channel close panic
+  - Short variable declaration
+  - defer/panic/recover
+  - Goroutines
+  - select statement
+  - Slice vs array
+  - sync.WaitGroup
+- Added Go to CATEGORIES type, category colors, and homepage
+- Targets "Go quiz online" keyword
+
+### Keywords targeted
+- "Go quiz online" (new quiz — high volume)
+- "golang quiz" (quiz content)
+- "Go goroutine quiz" (question in quiz)
+- "Go channel quiz" (question in quiz)
+- "Go interface quiz" (question in quiz)
+
+### Current stats
+- **Quizzes:** 34 (was 33)
+- **Total questions:** 173+ (was 165+)
+- **Categories:** 17 (was 16)
+
+---
+
 # DevQuiz — Daily Developer Trivia
 
 Daily programming quizzes. JavaScript, Python, TypeScript, Kotlin, Git, CSS, Docker, AWS, GitHub Actions, PHP, Java, and developer culture.
