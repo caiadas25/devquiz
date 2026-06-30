@@ -24,6 +24,7 @@ import { goQuiz2 } from "./quiz-go-2";
 import { jsQuiz2 } from "./quiz-js-2";
 import { typescriptQuiz2 } from "./quiz-typescript-2";
 import { javaQuiz2 } from "./quiz-java-2";
+import { kubernetesQuiz2 } from "./quiz-kubernetes-2";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -44,6 +45,7 @@ export const quizzes: Quiz[] = [
   phpQuiz,
   javaQuiz,
   sqlQuiz2,
+  kubernetesQuiz2,
   {
     id: "js-quiz-1",
     date: "2026-06-25",

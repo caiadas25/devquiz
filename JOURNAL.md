@@ -1,3 +1,19 @@
+## Sprint A (Round 20) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Kubernetes Quiz #2 (Advanced K8s)
+  - 5 questions: ClusterIP, DaemonSet, Role vs ClusterRole, Deployment replicas, Ingress
+  - Hard difficulty
+  - Updated quizzes.ts import and registration
+- Current stats: 42 quizzes, 222+ questions (was 41 quizzes, 217+ questions)
+
+### Keywords targeted
+- "kubernetes quiz" (new quiz — high volume)
+- "kubernetes quiz online" (quiz content)
+- "kubectl quiz" (quiz content)
+- "Kubernetes RBAC quiz" (quiz content)
+
+---
+
 ## Sprint A (Round 19) — June 30, 2026 (Growth Sprint — Full Sprint)
 ### What was done
 - Added React Quiz #2 (Hooks, Context & Performance)
