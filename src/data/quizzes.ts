@@ -12,6 +12,7 @@ import { kotlinQuiz } from "./quiz-kotlin-1";
 import { pythonQuiz2 } from "./quiz-python-2";
 import { nodeQuiz } from "./quiz-node-1";
 import { reactQuiz } from "./quiz-react-1";
+import { reactQuiz2 } from "./quiz-react-2";
 import { gitQuiz2 } from "./quiz-git-2";
 import { phpQuiz } from "./quiz-php-1";
 import { javaQuiz } from "./quiz-java-1";
@@ -27,6 +28,7 @@ import { javaQuiz2 } from "./quiz-java-2";
 export const quizzes: Quiz[] = [
   nodeQuiz,
   reactQuiz,
+  reactQuiz2,
   gitQuiz2,
   kotlinQuiz,
   pythonQuiz2,
