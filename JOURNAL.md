@@ -1,3 +1,30 @@
+## Sprint A (Round 13) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Go Quiz #2 (8 questions, hard difficulty):
+  - Interface zero value
+  - defer keyword behavior
+  - Slice creation methods
+  - len on make()
+  - Error handling pattern
+  - go keyword for goroutines
+  - Channel direction syntax (chan<-)
+  - fmt.Stringer interface
+- Targets "Go quiz online" keyword
+
+### Keywords targeted
+- "Go quiz online" (new quiz — high volume)
+- "Go interface quiz" (quiz content)
+- "Go defer quiz" (quiz content)
+- "Go channel quiz" (quiz content)
+- "Go concurrency quiz" (quiz content)
+
+### Current stats
+- **Quizzes:** 37 (was 36)
+- **Total questions:** 194+ (was 186+)
+- **Categories:** 17 (unchanged)
+
+---
+
 ## Sprint A (Round 12) — June 29, 2026 (Growth Sprint — DevQuiz Quick Wins)
 ### What was done
 - Added Rust Quiz #2 (5 questions, hard difficulty):
