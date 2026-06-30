@@ -20,6 +20,7 @@ import { goQuiz } from "./quiz-go-1";
 import { pythonQuiz3 } from "./quiz-python-3";
 import { rustQuiz2 } from "./quiz-rust-2";
 import { goQuiz2 } from "./quiz-go-2";
+import { jsQuiz2 } from "./quiz-js-2";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -996,6 +997,7 @@ export const quizzes: Quiz[] = [
   },
   goQuiz,
   goQuiz2,
+  jsQuiz2,
   pythonQuiz3,
   rustQuiz2,
 ];
