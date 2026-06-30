@@ -1,4 +1,17 @@
 ## Sprint A (Round 23) -- June 30, 2026 (Growth Sprint)
+## Sprint A (Round 24) -- June 30, 2026 (Growth Sprint)
+### What was done
+- Added System Design Quiz #1 (scalability, load balancing, caching, replication, CDN)
+  - 5 questions: horizontal vs vertical scaling, load balancers, caching, database replication, CDNs
+  - Hard difficulty
+  - Total: 46 quizzes, 257+ questions (was 45 quizzes, 252+ questions)
+
+### Keywords targeted
+- "system design quiz" (new quiz -- high volume)
+- "system design interview questions" (quiz content)
+- "load balancing quiz" (quiz content)
+
+---
 ### What was done
 - Added Web Security Quiz #1 (OWASP Top 10, auth, encryption)
   - 10 questions: XSS, CSRF, password hashing, SQL injection, CORS, Same-Origin Policy, CSP, JWT, HTTPS, least privilege
