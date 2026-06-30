@@ -1,3 +1,17 @@
+## Sprint A (Round 23) -- June 30, 2026 (Growth Sprint)
+### What was done
+- Added Web Security Quiz #1 (OWASP Top 10, auth, encryption)
+  - 10 questions: XSS, CSRF, password hashing, SQL injection, CORS, Same-Origin Policy, CSP, JWT, HTTPS, least privilege
+  - Medium difficulty
+  - Total: 45 quizzes, 252+ questions (was 44 quizzes, 242+ questions)
+
+### Keywords targeted
+- "web security quiz" (new quiz -- high volume)
+- "OWASP quiz" (quiz content)
+- "XSS quiz" (quiz content)
+- "CSRF quiz" (quiz content)
+
+---
 ## Sprint A (Round 22) -- June 30, 2026 (Growth Sprint)
 ### What was done
 - Added Database Quiz #1 (SQL fundamentals)
