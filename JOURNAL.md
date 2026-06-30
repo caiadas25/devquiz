@@ -1,3 +1,19 @@
+## Sprint A (Round 22) -- June 30, 2026 (Growth Sprint)
+### What was done
+- Added Database Quiz #1 (SQL fundamentals)
+  - 10 questions: PRIMARY KEY vs UNIQUE KEY, indexes, JOINs, N+1 problem, normalization, ACID, LEFT JOINs, composite indexes, DELETE vs TRUNCATE, covering indexes
+  - Medium difficulty
+  - Updated quizzes.ts import and registration
+- Total: 44 quizzes, 242+ questions (was 43 quizzes, 232+ questions)
+
+### Keywords targeted
+- "database quiz" (new quiz -- high volume)
+- "sql quiz online" (quiz content)
+- "sql interview questions" (quiz content)
+- "database indexing quiz" (quiz content)
+
+---
+
 ## Sprint A (Round 21) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
 ### What was done
 - Added Networking Quiz #1 (TCP/IP, DNS, HTTP/2, ports)
