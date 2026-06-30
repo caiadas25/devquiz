@@ -1,3 +1,19 @@
+## Sprint A (Round 21) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Networking Quiz #1 (TCP/IP, DNS, HTTP/2, ports)
+  - 10 questions: TCP vs UDP, three-way handshake, DNS, HTTP/2, ports, CDN, cookies vs JWT, subnet masks, reverse proxy vs load balancer, TIME_WAIT
+  - Medium difficulty
+  - Updated quizzes.ts import and registration
+- Total: 43 quizzes, 232+ questions (was 42 quizzes, 222+ questions)
+
+### Keywords targeted
+- "networking quiz" (new quiz — high volume)
+- "TCP vs UDP quiz" (quiz content)
+- "DNS quiz" (quiz content)
+- "HTTP/2 quiz" (quiz content)
+
+---
+
 ## Sprint A (Round 20) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
 ### What was done
 - Added Kubernetes Quiz #2 (Advanced K8s)
