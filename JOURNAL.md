@@ -1,3 +1,26 @@
+## Sprint A (Round 16) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Java Quiz #2 — Streams, Lambdas & Modern Java (5 questions, hard difficulty):
+  - Java Streams filter/collect pattern
+  - Functional interfaces (SAM interfaces)
+  - Optional.orElse behavior
+  - Stream.map vs filter vs reduce
+  - Method references (::) syntax
+  - Stream.flatMap vs map difference
+  - Collectors.groupingBy usage
+
+### Keywords targeted
+- "java quiz online" (new quiz — high volume)
+- "java streams quiz" (quiz content)
+- "java lambda quiz" (quiz content)
+- "java 8 quiz" (quiz content)
+
+### Current stats
+- **Quizzes:** 39 (was 38)
+- **Total questions:** 207+ (was 199+)
+
+---
+
 ## Sprint B (Round 15) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
 ### What was done
 - Added TypeScript Quiz #2 (5 questions, hard difficulty):
