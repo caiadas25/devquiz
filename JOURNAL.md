@@ -1,3 +1,24 @@
+## Sprint B (Round 17) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
+### What was done
+- Added Kubernetes Quiz #1 — Pods, Deployments & Services (5 questions, medium difficulty):
+  - Smallest deployable unit (Pod)
+  - Deployment vs StatefulSet difference
+  - Service object for network exposure
+  - kubectl apply declarative management
+  - ConfigMap usage
+
+### Keywords targeted
+- "kubernetes quiz" (new quiz — high volume)
+- "K8s quiz online" (quiz content)
+- "kubectl quiz" (quiz content)
+- "Kubernetes interview questions" (quiz content)
+
+### Current stats
+- **Quizzes:** 40 (was 39)
+- **Total questions:** 212+ (was 207+)
+
+---
+
 ## Sprint A (Round 16) — June 30, 2026 (Growth Sprint — DevQuiz Quick Wins)
 ### What was done
 - Added Java Quiz #2 — Streams, Lambdas & Modern Java (5 questions, hard difficulty):

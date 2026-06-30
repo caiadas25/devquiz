@@ -1004,4 +1004,59 @@ export const quizzes: Quiz[] = [
   rustQuiz2,
   typescriptQuiz2,
   javaQuiz2,
+  {
+    id: "kubernetes-quiz-1",
+    date: "2026-07-03",
+    category: "DevOps",
+    title: "Kubernetes Quiz #1 — Pods, Deployments & Services",
+    description: "K8s fundamentals — pods, deployments, services, configmaps, and kubectl commands.",
+    difficulty: "medium",
+    questions: [
+      {
+        question: "What is the smallest deployable unit in Kubernetes?",
+        options: ["Node", "Pod", "Container", "Deployment"],
+        correct: 1,
+        explanation: "A Pod is the smallest deployable unit. It wraps one or more containers that share networking and storage. You rarely create Pods directly — Deployments manage them."
+      },
+      {
+        question: "What is the difference between a Deployment and a StatefulSet?",
+        options: [
+          "There is no difference",
+          "Deployments are for stateless apps, StatefulSets are for stateful apps with stable identities",
+          "Deployments only support one replica",
+          "StatefulSets are for batch jobs"
+        ],
+        correct: 1,
+        explanation: "Deployments provide unordered, stateless pod management. StatefulSets give pods stable network identities, persistent storage, and ordered deployment — essential for databases."
+      },
+      {
+        question: "What Kubernetes object exposes your app to the network?",
+        options: ["ConfigMap", "Secret", "Service", "Namespace"],
+        correct: 2,
+        explanation: "A Service provides a stable endpoint (IP + DNS) to access your pods. Types include ClusterIP (internal), NodePort, and LoadBalancer (external)."
+      },
+      {
+        question: "What does `kubectl apply -f deployment.yaml` do?",
+        options: [
+          "Creates a new deployment only",
+          "Creates or updates a resource to match the desired state in the file",
+          "Deletes and recreates the deployment",
+          "Only shows a diff without applying changes"
+        ],
+        correct: 1,
+        explanation: "`kubectl apply` is declarative — it creates the resource if it doesn't exist, or updates it if it does. This is the recommended way to manage K8s resources."
+      },
+      {
+        question: "What is a ConfigMap used for?",
+        options: [
+          "Storing secrets like passwords",
+          "Storing non-sensitive configuration data as key-value pairs",
+          "Monitoring cluster health",
+          "Managing user permissions"
+        ],
+        correct: 1,
+        explanation: "ConfigMaps store non-sensitive configuration (environment variables, config files, command-line args). For passwords and keys, use Secrets instead."
+      }
+    ]
+  },
 ];
