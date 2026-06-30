@@ -26,6 +26,7 @@ import { typescriptQuiz2 } from "./quiz-typescript-2";
 import { javaQuiz2 } from "./quiz-java-2";
 import { kubernetesQuiz2 } from "./quiz-kubernetes-2";
 import { networkingQuiz1 } from "./quiz-networking-1";
+import { databaseQuiz1 } from "./quiz-database-1";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -1065,4 +1066,5 @@ export const quizzes: Quiz[] = [
       }
     ]
   },
+  databaseQuiz1,
 ];
