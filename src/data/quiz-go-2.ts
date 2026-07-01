@@ -4,7 +4,7 @@ export const goQuiz2 = {
   category: "Go",
   title: "Go Quiz #2",
   description: "Goroutines, channels, interfaces, and Go concurrency patterns.",
-  difficulty: "hard",
+  difficulty: "hard" as const,
   questions: [
     {
       question: "What is the difference between a buffered and unbuffered channel in Go?",
