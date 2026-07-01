@@ -46,3 +46,18 @@
 - "load balancing quiz" (quiz content)
 
 ---
+
+## Sprint D (Round 27) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added Linux Quiz #1 -- Commands, Permissions and Shell Essentials
+  - 5 questions: chmod permissions, kill vs kill -9, grep, /dev/null, ps aux
+  - Medium difficulty targeting Linux administration fundamentals
+  - Total: 49 quizzes, 272+ questions (was 48, 267+)
+
+### Keywords targeted
+- "linux quiz online" (new quiz -- high volume)
+- "linux commands quiz" (quiz content)
+- "chmod quiz" (quiz content)
+- "linux permissions quiz" (quiz content)
+
+---
