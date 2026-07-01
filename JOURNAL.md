@@ -1,3 +1,22 @@
+## Sprint A (Round 28) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added HTML Quiz #1 — Semantic HTML, Forms & Accessibility
+  - 5 questions: div vs section, alt attribute, CSS link tag, viewport meta, script defer
+  - Medium difficulty targeting HTML fundamentals
+- Total: 34 quizzes, 277+ questions (was 33 quizzes, 272+ questions)
+
+### Keywords targeted
+- "HTML quiz online" (new quiz -- high volume)
+- "semantic HTML quiz" (quiz content)
+- "HTML accessibility quiz" (quiz content)
+- "viewport meta tag quiz" (quiz content)
+- "script defer quiz" (quiz content)
+
+### SEO fixes
+- No sitemap changes needed (auto-generated from quiz data)
+
+---
+
 ## Sprint C (Round 26) -- July 1, 2026 (Growth Sprint)
 ### What was done
 - Added Node.js Quiz #2 — Async Patterns & Internals
