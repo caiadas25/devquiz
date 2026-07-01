@@ -29,6 +29,7 @@ import { networkingQuiz1 } from "./quiz-networking-1";
 import { databaseQuiz1 } from "./quiz-database-1";
 import { securityQuiz1 } from "./quiz-security-1";
 import { systemDesignQuiz1 } from "./quiz-system-design-1";
+import { cssQuiz3 } from "./quiz-css-3";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -1071,4 +1072,5 @@ export const quizzes: Quiz[] = [
   databaseQuiz1,
   securityQuiz1,
   systemDesignQuiz1,
+  cssQuiz3,
 ];
