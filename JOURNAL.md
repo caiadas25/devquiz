@@ -267,4 +267,21 @@ Set `og:image` meta tag on each quiz completion page to point to this route with
 - Auto-generated sitemap includes new quiz
 
 ---
+## Sprint C (Round 33) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added SQL Quiz #2 — Joins, Indexes & Transactions
+  - 5 questions: INNER JOIN vs LEFT JOIN, indexes, transactions, COUNT DISTINCT, GROUP BY
+  - Medium difficulty targeting intermediate SQL concepts
+- Total: 53 quizzes, 325+ questions (was 52 quizzes, 320+)
+
+### Keywords targeted
+- "sql quiz online" (existing quiz — higher coverage)
+- "sql joins quiz" (quiz content)
+- "sql index quiz" (quiz content)
+- "sql transaction quiz" (quiz content)
+
+### SEO fixes
+- Auto-generated sitemap includes new quiz
+
+---
 
