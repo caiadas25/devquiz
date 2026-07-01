@@ -250,4 +250,21 @@ Set `og:image` meta tag on each quiz completion page to point to this route with
 - Auto-generated sitemap includes new quiz
 
 ---
+## Sprint B (Round 33) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added HTML Quiz #2 — Forms, Validation & Accessibility
+  - 5 questions: label for attribute, nav element, required attribute, alt text, date input
+  - Medium difficulty targeting intermediate HTML concepts
+- Total: 52 quizzes, 320+ questions (was 51 quizzes, 315+)
+
+### Keywords targeted
+- "html quiz online" (existing quiz — higher coverage)
+- "html forms quiz" (quiz content)
+- "html accessibility quiz" (quiz content)
+- "html validation quiz" (quiz content)
+
+### SEO fixes
+- Auto-generated sitemap includes new quiz
+
+---
 
