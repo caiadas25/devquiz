@@ -24,6 +24,7 @@ import { rustQuiz2 } from "./quiz-rust-2";
 import { goQuiz2 } from "./quiz-go-2";
 import { jsQuiz2 } from "./quiz-js-2";
 import { typescriptQuiz2 } from "./quiz-typescript-2";
+import { typescriptQuiz3 } from "./quiz-typescript-3";
 import { javaQuiz2 } from "./quiz-java-2";
 import { kubernetesQuiz2 } from "./quiz-kubernetes-2";
 import { networkingQuiz1 } from "./quiz-networking-1";
@@ -1019,6 +1020,7 @@ export const quizzes: Quiz[] = [
   pythonQuiz3,
   rustQuiz2,
   typescriptQuiz2,
+  typescriptQuiz3,
   javaQuiz2,
   {
     id: "kubernetes-quiz-1",
