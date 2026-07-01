@@ -1,6 +1,26 @@
+## Sprint C (Round 26) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added Node.js Quiz #2 — Async Patterns & Internals
+  - 5 questions: nextTick vs setImmediate, readable streams, worker_threads, event loop phases, stream.pipeline
+  - Hard difficulty targeting advanced Node.js concepts
+- Total: 48 quizzes, 267+ questions (was 47 quizzes, 262+ questions)
+
+### Keywords targeted
+- "node.js quiz online" (quiz -- high volume)
+- "node.js event loop quiz" (quiz content)
+- "worker threads node.js" (quiz content)
+- "stream.pipeline node.js" (quiz content)
+
+### SEO fixes
+- No sitemap changes needed (auto-generated from quiz data)
+
+---
+
 ## Sprint B (Round 25) -- July 1, 2026 (Growth Sprint)
 ### What was done
 - Added CSS Quiz #3 — Advanced Layout & Animations
+  - 5 questions: has() selector, CSS subgrid, container queries, animation performance, aspect-ratio
+  - Hard difficulty targeting advanced CSS concepts
   - 5 questions: has() selector, CSS subgrid, container queries, animation performance, aspect-ratio
   - Hard difficulty targeting advanced CSS concepts
   - Total: 47 quizzes, 262+ questions (was 46 quizzes, 257+ questions)
