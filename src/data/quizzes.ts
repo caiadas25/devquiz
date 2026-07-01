@@ -39,6 +39,8 @@ import { pythonQuiz4 } from "./quiz-python-4";
 import { nextjsQuiz1 } from "./quiz-nextjs-1";
 import { rustQuiz3 } from "./quiz-rust-3";
 
+import { gitQuiz1 } from "./quiz-git-1";
+
 export const quizzes: Quiz[] = [
   nodeQuiz,
   reactQuiz,
@@ -1089,4 +1091,5 @@ export const quizzes: Quiz[] = [
   pythonQuiz4,
   nextjsQuiz1,
   rustQuiz3,
+  gitQuiz1,
 ];
