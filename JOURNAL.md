@@ -1,3 +1,20 @@
+## Sprint C (Round 30) -- July 1, 2026 (Growth Sprint, Part 2)
+### What was done
+- Added TypeScript Quiz #3 — Advanced Types & Generics
+  - 5 questions: infer keyword, unknown vs any, as const, discriminated unions, satisfies operator
+  - Hard difficulty targeting advanced TypeScript concepts
+- Total: 37 quizzes, 292+ questions (was 36, 287+)
+
+### Keywords targeted
+- "typescript quiz online" (existing quiz -- higher coverage)
+- "typescript infer quiz" (quiz content)
+- "typescript unknown vs any quiz" (quiz content)
+
+### SEO fixes
+- No sitemap changes needed (auto-generated from quiz data)
+
+---
+
 ## Sprint C (Round 30) -- July 1, 2026 (Growth Sprint)
 ### What was done
 - Added Docker Quiz #3 — Compose, Networking & Multi-Container Orchestration
