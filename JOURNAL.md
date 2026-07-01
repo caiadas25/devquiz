@@ -1,3 +1,20 @@
+## Sprint A (Round 31) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added Next.js Quiz #1 — App Router, Server Components & Data Fetching
+  - 5 questions: App Router vs Pages Router, React Server Components, 'use client' directive, dynamic rendering, loading.tsx
+  - Medium difficulty targeting Next.js App Router concepts
+- Total: 38 quizzes, 297+ questions (was 37, 292+)
+
+### Keywords targeted
+- "next.js quiz" (new quiz -- high volume)
+- "react server components quiz" (quiz content)
+- "app router quiz" (quiz content)
+
+### SEO fixes
+- Auto-generated sitemap includes new quiz
+
+---
+
 ## Sprint C (Round 30) -- July 1, 2026 (Growth Sprint, Part 2)
 ### What was done
 - Added TypeScript Quiz #3 — Advanced Types & Generics
