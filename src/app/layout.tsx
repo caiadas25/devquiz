@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "DevQuiz — Daily Developer Trivia",
   description:
     "Test your programming knowledge with daily quizzes. JavaScript, Python, Go, Rust, Git, CSS, React, Node.js, Computer Science, and developer culture.",
+  metadataBase: new URL("https://devquiz.vercel.app"),
   openGraph: {
     title: "DevQuiz — Daily Developer Trivia",
     description: "Daily programming quizzes. JavaScript, Python, React, Node.js, Git — test your knowledge, track your streak, share your score.",
@@ -28,6 +29,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "DevQuiz",
+              url: "https://devquiz.vercel.app",
+              description: "Daily developer programming quizzes. Test your knowledge in JavaScript, Python, Go, Rust, Git, CSS, React, Node.js, and more.",
+              applicationCategory: "DeveloperApplication",
+              operatingSystem: "Web",
+              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+            }),
+          }}
+        />
+      </head>
       <body className="bg-gray-950 text-gray-100 antialiased min-h-screen">
         <header className="border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
