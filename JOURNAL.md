@@ -1,3 +1,21 @@
+## Sprint A (Round 29) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added Python Quiz #4 — Decorators, Generators & Advanced Patterns
+  - 5 questions: nonlocal, decorators, generators vs functions, context managers, @staticmethod
+  - Hard difficulty targeting advanced Python concepts
+- Total: 35 quizzes, 282+ questions (was 34 quizzes, 277+)
+
+### Keywords targeted
+- "python quiz online" (existing quiz -- higher coverage)
+- "python decorators quiz" (quiz content)
+- "python generators quiz" (quiz content)
+- "python context manager quiz" (quiz content)
+
+### SEO fixes
+- No sitemap changes needed (auto-generated from quiz data)
+
+---
+
 ## Sprint A (Round 28) -- July 1, 2026 (Growth Sprint)
 ### What was done
 - Added HTML Quiz #1 — Semantic HTML, Forms & Accessibility
