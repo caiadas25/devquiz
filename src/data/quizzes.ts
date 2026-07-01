@@ -43,6 +43,8 @@ import { gitQuiz1 } from "./quiz-git-1";
 
 import { htmlQuiz2 } from "./quiz-html-2";
 
+import { databaseQuiz2 } from "./quiz-database-2";
+
 export const quizzes: Quiz[] = [
   nodeQuiz,
   reactQuiz,
@@ -1095,4 +1097,5 @@ export const quizzes: Quiz[] = [
   rustQuiz3,
   gitQuiz1,
   htmlQuiz2,
+  databaseQuiz2,
 ];
