@@ -37,6 +37,7 @@ import { linuxQuiz1 } from "./quiz-linux-1";
 import { htmlQuiz1 } from "./quiz-html-1";
 import { pythonQuiz4 } from "./quiz-python-4";
 import { nextjsQuiz1 } from "./quiz-nextjs-1";
+import { rustQuiz3 } from "./quiz-rust-3";
 
 export const quizzes: Quiz[] = [
   nodeQuiz,
@@ -66,7 +67,7 @@ export const quizzes: Quiz[] = [
     category: "JavaScript",
     title: "JavaScript Quiz #1",
     description: "Test your JS fundamentals — closures, hoisting, and type coercion.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What is the output of: `typeof null`?",
@@ -111,7 +112,7 @@ export const quizzes: Quiz[] = [
     category: "Python",
     title: "Python Quiz #1",
     description: "Mutable defaults, list comprehensions, and Pythonic gotchas.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What's wrong with `def append_to(item, lst=[]): lst.append(item); return lst`?",
@@ -161,7 +162,7 @@ export const quizzes: Quiz[] = [
     category: "Git",
     title: "Git Quiz #1",
     description: "Branching, merging, rebasing, and common Git workflows.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What does `git rebase` do differently from `git merge`?",
@@ -226,7 +227,7 @@ export const quizzes: Quiz[] = [
     category: "CSS",
     title: "CSS Quiz #1",
     description: "Flexbox, specificity, selectors, and modern CSS features.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What is the default value of `flex-direction`?",
@@ -281,7 +282,7 @@ export const quizzes: Quiz[] = [
     category: "General CS",
     title: "Computer Science Quiz #1",
     description: "Data structures, algorithms, Big O notation, and CS fundamentals.",
-    difficulty: "hard",
+    difficulty: "hard" as const,
     questions: [
       {
         question: "What is the time complexity of binary search?",
@@ -331,7 +332,7 @@ export const quizzes: Quiz[] = [
     category: "Developer Culture",
     title: "Developer Culture Quiz #1",
     description: "Famous bugs, tech history, memes, and the stories behind the tools we use.",
-    difficulty: "easy",
+    difficulty: "easy" as const,
     questions: [
       {
         question: "What was the cost of the Ariane 5 explosion in 1996?",
@@ -391,7 +392,7 @@ export const quizzes: Quiz[] = [
     category: "TypeScript",
     title: "TypeScript Quiz #1",
     description: "Type narrowing, generics, utility types, and TypeScript-specific concepts.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What is the difference between `interface` and `type` in TypeScript?",
@@ -456,7 +457,7 @@ export const quizzes: Quiz[] = [
     category: "DevOps",
     title: "Docker Quiz #1",
     description: "Containers, images, Dockerfiles, volumes, and networking fundamentals.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What is the difference between a Docker image and a container?",
@@ -521,7 +522,7 @@ export const quizzes: Quiz[] = [
     category: "DevOps",
     title: "Linux Quiz #1",
     description: "File permissions, processes, shell commands, and Linux fundamentals.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What does `chmod 755` do?",
@@ -586,7 +587,7 @@ export const quizzes: Quiz[] = [
     category: "React",
     title: "React Quiz #1",
     description: "Hooks, state management, rendering, and React component patterns.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "When does React re-render a component?",
@@ -651,7 +652,7 @@ export const quizzes: Quiz[] = [
     category: "General CS",
     title: "REST API Quiz #1",
     description: "HTTP methods, status codes, authentication, and REST API design principles.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "Which HTTP method should be used to update an existing resource?",
@@ -711,7 +712,7 @@ export const quizzes: Quiz[] = [
     category: "Developer Culture",
     title: "Web Security Quiz #1",
     description: "XSS, CSRF, SQL injection, and other security fundamentals every developer should know.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What does XSS stand for in web security?",
@@ -776,7 +777,7 @@ export const quizzes: Quiz[] = [
     category: "DevOps",
     title: "Kubernetes Quiz #1",
     description: "Pods, services, deployments, and cluster management fundamentals.",
-    difficulty: "hard",
+    difficulty: "hard" as const,
     questions: [
       {
         question: "What is the smallest deployable unit in Kubernetes?",
@@ -841,7 +842,7 @@ export const quizzes: Quiz[] = [
     category: "React",
     title: "React Hooks Quiz #1",
     description: "useState, useEffect, useRef, useCallback — test your hooks fundamentals.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "When does `useEffect` run by default?",
@@ -906,7 +907,7 @@ export const quizzes: Quiz[] = [
     category: "Node.js",
     title: "Node.js Quiz #2",
     description: "Express middleware, event loop, and Node.js internals.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What does `app.use()` do in Express?",
@@ -971,7 +972,7 @@ export const quizzes: Quiz[] = [
     category: "Python",
     title: "Python Quiz #2 — Data Structures & Comprehensions",
     description: "Lists, dictionaries, sets, generators, and Pythonic idioms.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What is the output of: `[x**2 for x in range(5) if x % 2 == 0]`?",
@@ -1029,7 +1030,7 @@ export const quizzes: Quiz[] = [
     category: "DevOps",
     title: "Kubernetes Quiz #1 — Pods, Deployments & Services",
     description: "K8s fundamentals — pods, deployments, services, configmaps, and kubectl commands.",
-    difficulty: "medium",
+    difficulty: "medium" as const,
     questions: [
       {
         question: "What is the smallest deployable unit in Kubernetes?",
@@ -1087,4 +1088,5 @@ export const quizzes: Quiz[] = [
   htmlQuiz1,
   pythonQuiz4,
   nextjsQuiz1,
+  rustQuiz3,
 ];

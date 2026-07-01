@@ -1,3 +1,22 @@
+## Sprint A (Round 32) -- July 1, 2026 (Growth Sprint)
+### What was done
+- Added Rust Quiz #3 — Async Rust, Unsafe, and Advanced Patterns
+  - 5 questions: unsafe capabilities, raw pointers, tokio::spawn, &str vs String, ? operator
+  - Hard difficulty targeting advanced Rust concepts
+  - Fixed TypeScript type errors in all inline quiz difficulty fields (added `as const`)
+- Total: 50 quizzes, 310+ questions (was 49 quizzes, 305+ questions)
+
+### Keywords targeted
+- "rust quiz online" (new quiz -- high volume)
+- "rust unsafe quiz" (quiz content)
+- "rust async quiz" (quiz content)
+- "rust ownership quiz" (quiz content)
+
+### SEO fixes
+- Auto-generated sitemap includes new quiz
+
+---
+
 ## Sprint A (Round 31) -- July 1, 2026 (Growth Sprint)
 ### What was done
 - Added Next.js Quiz #1 — App Router, Server Components & Data Fetching
