@@ -9,6 +9,7 @@ import { rustQuiz } from "./quiz-rust-1";
 import { typescriptQuiz } from "./quiz-typescript-1";
 import { cssQuiz } from "./quiz-css-1";
 import { cssQuiz2 } from "./quiz-css-2";
+import { cssQuiz4 } from "./quiz-css-4";
 import { kotlinQuiz } from "./quiz-kotlin-1";
 import { pythonQuiz2 } from "./quiz-python-2";
 import { nodeQuiz } from "./quiz-node-1";
@@ -1100,4 +1101,5 @@ export const quizzes: Quiz[] = [
   htmlQuiz2,
   databaseQuiz2,
   linuxQuiz2,
+  cssQuiz4,
 ];
